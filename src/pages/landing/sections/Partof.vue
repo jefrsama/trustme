@@ -1,12 +1,12 @@
 <template>
-  <div class="wrapper-block-eight">
-    <img class="bg" src="./../../../../public/img/partofBG.png" alt="">
+  <section class="wrapper-block-eight">
+    <img class="bg" src="../../../assets/img/partofBG.png" alt="">
     <div class="light-container_back"></div>
     <div class="container">
       <div class="light-container"></div>
       <h1 class="h1">Станьте частью TrustMe</h1>
       <p class="py-3 text">Уважаемые инвесторы, мы приглашаем:</p>
-      <div class="d-flex justify-content-around align-items-center mt-5">
+      <div class="d-flex justify-content-center align-items-center gap-70 mt-5">
         <div class="inner_card">
           <h3>Трех бизнес-ангелов по</h3>
           <h1>$100.000</h1>
@@ -27,16 +27,19 @@
           </svg>
           </span>
     </button>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'PartOfSection',
+  name: "PartOfSection",
 }
 </script>
 
 <style scoped lang="scss">
+.gap-70 {
+  gap: 70px;
+}
 .wrapper-block-eight {
   width: 100%;
   height: 1000px;
@@ -120,12 +123,12 @@ export default {
     align-items: center;
     width: 460px;
     height: 330px;
-    padding: 24px;
+    padding: 44px;
     gap: 24px;
     border-radius: 20px;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transform: perspective(200px) rotateY(-3deg) rotateX(2deg) skewY(8deg);
+    transform: perspective(1000px) rotateY(-3deg) rotateX(2deg) skewY(8deg);
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
     -webkit-backdrop-filter: blur(20px);
@@ -138,12 +141,12 @@ export default {
     align-items: center;
     width: 460px;
     height: 330px;
-    padding: 24px;
+    padding: 44px;
     gap: 24px;
     border-radius: 20px;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transform: perspective(200px) rotateY(3deg) rotateX(2deg) skewY(-8deg);
+    transform: perspective(1000px) rotateY(3deg) rotateX(2deg) skewY(-8deg);
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
     -webkit-backdrop-filter: blur(20px);
@@ -151,7 +154,7 @@ export default {
   }
   .inner_card {
     h3 {
-      font-family: Manrope;
+      font-family: Manrope sans-serif;
       font-size: 28px;
       font-weight: 600;
       line-height: 45px;
@@ -160,7 +163,7 @@ export default {
       color: #0EB6B6;
     }
     h1 {
-      font-family: Manrope;
+      font-family: Manrope sans-serif;
       font-size: 56px;
       font-weight: 700;
       line-height: 90px;
@@ -169,7 +172,7 @@ export default {
       color: #FDFDFD;
     }
     p {
-      font-family: Manrope;
+      font-family: Manrope sans-serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 28px;
@@ -179,20 +182,20 @@ export default {
     }
   }
 
-
   .h1 {
     margin-top: 120px;
-    font-family: Manrope;
+    font-family: Manrope sans-serif;
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
     letter-spacing: 0px;
     text-align: center;
     color: #FDFDFD;
+    opacity: 1;
   }
 
   .text{
-    font-family: Manrope;
+    font-family: Manrope sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
@@ -200,6 +203,5 @@ export default {
     text-align: center;
     color: #B5BDBE;
   }
-
 }
 </style>

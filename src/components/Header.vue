@@ -2,7 +2,7 @@
   <header>
     <div class="container d-flex justify-content-between align-items-center">
       <div>
-        <img src="./../../public/img/Лого.svg" width="120%" alt="">
+        <img src="../assets/img/Лого.svg" width="120%" alt="">
       </div>
       <div class="">
         <ul class="nav gap-15">
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'HeaderComponent',
+  name: "HeaderComponent",
   props: {
     msg: String
   }
@@ -31,6 +31,7 @@ export default {
 
 <style scoped lang="scss">
 header {
+  font-family: Monrope, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;

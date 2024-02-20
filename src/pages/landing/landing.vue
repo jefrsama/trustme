@@ -22,7 +22,7 @@ import ContactSection from "@/pages/landing/sections/Contact.vue";
 import PartOfSection from "@/pages/landing/sections/Partof.vue";
 
 export default {
-  name: 'landingPage',
+  name: "landingPage",
   components: {
     PartOfSection,
     ContactSection,

@@ -1,10 +1,10 @@
 <template>
-  <div class="wrapper-block-two d-flex justify-content-center">
+  <section class="wrapper-block-two d-flex justify-content-center">
     <div class="container m-auto">
       <div class="inner_card">
         <h2 class="text-center text-white">Инвестируйте в стартап с большим будущим!</h2>
         <div class="d-flex justify-content-between mt-5 gap-45">
-          <img src="./../../../../public/img/IMG.png" alt="" class="">
+          <img src="~@/assets/img/IMG.png" alt="" class="">
           <div>
             <p class="text-white">“Начав свой путь в 2020 году как платформа для отзывов и рекомендаций, <a href="#">TrustMe</a> на сегодняшний день стала популярной площадкой, используемой как юридическими, так и физическими лицами в Казахстане. В декабре 2021 года мы запустили онлайн-сервис подписания договоров —
               <a href="#">TrustContract</a>”.</p>
@@ -13,12 +13,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'InvestSection',
+  name: "InvestSection",
 }
 </script>
 

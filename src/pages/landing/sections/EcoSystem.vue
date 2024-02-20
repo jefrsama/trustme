@@ -1,8 +1,8 @@
 <template>
-  <div class="wrapper-block-one pt-5">
+  <section class="wrapper-block-one pt-5">
     <div class="container m-auto text-center">
       <div class="logo">
-        <img src="./../../../../public/img/Лого.svg" width="198px" height="41.25px" alt="">
+        <img src="~@/assets/img/Лого.svg" width="198px" height="41.25px" alt="">
       </div>
       <div class="mt-5">
         <h1 class="text-white">Экосистема TrustMe</h1>
@@ -12,16 +12,16 @@
     </div>
     <div>
       <div class="mockup">
-        <img src="./../../../../public/img/Browser.png" alt="">
+        <img src="~@/assets/img/Browser.png" alt="">
       </div>
       <div class="rectangle"></div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'EcoSystem',
+  name: "EcoSystem",
 }
 </script>
 
@@ -31,7 +31,7 @@ export default {
   position: relative;
   width: 100%;
   height: 972px;
-  background-image: url("./../../../../public/img/BG.png");
+  background-image: url("../../../assets/img/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #020F22;

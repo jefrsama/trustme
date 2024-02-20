@@ -1,52 +1,49 @@
 <template>
-  <div class="wrapper-block-seven d-flex flex-column justify-content-between">
+  <section class="wrapper-block-seven d-flex flex-column justify-content-between">
     <div class="container">
       <h1 class="title">Планы на 2024 год</h1>
-      <img class="img" src="./../../../../public/img/bg16.png" alt="">
-      <img class="img" src="./../../../../public/img/map.png" alt="">
+      <img class="img" src="../../../assets/img/bg16.png" alt="">
+      <img class="img" src="../../../assets/img/map.png" alt="">
       <div class="x-sixteen">
-        <div>
-          <h1>x16</h1>
-          <svg width="142" height="191" viewBox="0 0 142 191" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M71.0293 0C72.855 0 74.6063 0.856029 75.7241 2.30756L140.223 85.0446C141.639 86.8683 141.9 89.2875 140.894 91.3345C139.888 93.3816 137.801 94.6842 135.528 94.6842H93.0505V184.604C93.0505 187.88 90.3677 190.559 87.0887 190.559H54.8952C51.6163 190.559 48.9335 187.88 48.9335 184.604V94.7214H6.45594C4.18302 94.7214 2.05914 93.4188 1.09035 91.3717C0.121569 89.3247 0.345133 86.8683 1.76105 85.0818L66.3344 2.30756C67.4522 0.856029 69.2035 0 71.0293 0Z" fill="url(#paint0_linear_7122_9839)"/>
-            <defs>
-              <linearGradient id="paint0_linear_7122_9839" x1="7.42144" y1="5.39315" x2="170.271" y2="52.4624" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#079584"/>
-                <stop offset="1" stop-color="#00A6B7"/>
-              </linearGradient>
-            </defs>
-          </svg>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="my-5">
+            <h1>x16</h1>
+            <img src="~@/assets/img/Vector.svg" alt="">
+          </div>
+          <h3>Во столько раз мы должны вырасти в 2024 году,</h3>
+          <p>увеличив стоимость компании до <span>$150 млн</span></p>
         </div>
+
       </div>
     </div>
     <div class="container d-flex justify-content-between pb-5">
       <div class="inner_card">
-        <img src="./../../../../public/img/iconn1.png" alt="">
+        <img src="../../../assets/img/iconn1.png" alt="">
         <h2 class="">Новые рынки</h2>
         <p class="">Турция, Саудовская Аравия, США и другие страны</p>
       </div>
       <div class="inner_card">
-        <img src="./../../../../public/img/iconn2.png" alt="">
+        <img src="../../../assets/img/iconn2.png" alt="">
         <h2 class="">Новые продукты</h2>
         <p class="">TrustMe AI, Big Data и Data Science</p>
       </div>
       <div class="inner_card">
-        <img src="./../../../../public/img/iconn3.png" alt="">
+        <img src="../../../assets/img/iconn3.png" alt="">
         <h2 class="">Высокий спрос</h2>
         <p class="">несмотря на конкуренцию (DocuSign, AdobeSign)</p>
       </div>
       <div class="inner_card">
-        <img src="./../../../../public/img/iconn4.png" alt="">
+        <img src="../../../assets/img/iconn4.png" alt="">
         <h2>Задача</h2>
         <p>Масштабироваться по миру, став лидером по подписанию договоров</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'PlansSection',
+  name: "PlansSection",
 }
 </script>
 
@@ -104,6 +101,35 @@ export default {
       text-align: center;
       color: #fff;
     }
+
+    h3 {
+      font-family: Manrope, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: 0em;
+      color: #FDFDFD;
+    }
+
+    p {
+      font-family: Manrope, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #FDFDFD;
+    }
+    span {
+      font-family: Inter, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #0EB6B6;
+    }
+
   }
 
   .title {
@@ -139,7 +165,7 @@ export default {
       color: #fff;
     }
     p {
-      font-family: Manrope;
+      font-family: Manrope sans-serif;
       font-size: 19px;
       font-weight: 400;
       line-height: 25px;
