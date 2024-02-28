@@ -13,20 +13,40 @@
           <li class="nav-item"><a href="#" class="nav-link text-white">Новости</a></li>
         </ul>
       </div>
-      <div class="text-white">
-        <b>RU</b>
+      <div>
+        <Dropdown v-model="selectedCityValue" :options="selectedCity" optionValue="value" optionLabel="label" @change="changeLanguage()" class="w-full md:w-14rem"></Dropdown>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import Dropdown from 'primevue/dropdown';
+import { locale } from "@/stores/i18nStore";
+
 export default {
   name: "HeaderComponent",
   props: {
     msg: String
+  },
+  components: {
+    Dropdown,
+  },
+  data() {
+    return {
+      selectedCityValue: locale,
+      selectedCity: [{ label: "ru", value: "ru" },
+      { label: "kz", value: "kz" }]
+    }
+  },
+  methods: {
+    changeLanguage() {
+      localStorage.setItem("lang", this.selectedCityValue);
+      // this.$root.$emit("languageChanged");
+      window.location.reload();
+    }
   }
-}
+  }
 </script>
 
 <style scoped lang="scss">

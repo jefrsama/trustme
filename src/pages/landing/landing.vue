@@ -1,4 +1,9 @@
 <template>
+
+  <div style="height: 50px;">
+    <h1 style="padding-top: 20px;">{{$t("iin")}}</h1>
+  </div>
+
   <eco-system/>
   <invest-section/>
   <achievement-page/>
@@ -26,7 +31,8 @@ export default {
   components: {
     PartOfSection,
     ContactSection,
-    PlansSection, CapitalSection, CasesSection, TrustContractPage, AchievementPage, InvestSection, EcoSystem},
+    PlansSection, CapitalSection, CasesSection, TrustContractPage, AchievementPage, InvestSection, EcoSystem
+  },
 }
 </script>
 
