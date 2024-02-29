@@ -62,21 +62,13 @@
         </div>
       </div>
 
-      <div class="faces text-white text-center mt-5">
-        <h1 class="">Наши клиенты</h1>
-      </div>
-
     </div>
-    <div class="scroll imgBox pt-5" style="--time:5s">
-      <div class="d-flex gap-80">
-        <img src="~@/assets/img/face5.png" alt="">
-        <img src="~@/assets/img/face6.png" alt="">
-        <img src="~@/assets/img/face7.png" alt="">
-        <img src="~@/assets/img/face8.png" alt="">
-        <img src="~@/assets/img/face9.png" alt="">
-        <img src="~@/assets/img/face10.png" alt="">
-        <img src="~@/assets/img/face11.png" alt="">
-        <img src="~@/assets/img/face12.png" alt="">
+
+    <div class="clients text-white text-center">
+      <div class="scroll">
+        <div v-for="(faceGroup, index) in faceGroups" :key="index" class="scroll-slide">
+          <img v-for="(face, faceIndex) in faceGroup" :key="faceIndex" :src="require(`@/assets/img/face${faceIndex + 6}.png`)" :alt="'Face ' + faceIndex">
+        </div>
       </div>
     </div>
   </section>
@@ -87,8 +79,29 @@
 
 export default {
   name: "CapitalSection",
-  components: {
-
+  data() {
+    return {
+      faceGroups: [
+        [
+          "~@/assets/img/face6.png",
+          "~@/assets/img/face7.png",
+          "~@/assets/img/face8.png",
+          "~@/assets/img/face9.png",
+          "~@/assets/img/face10.png",
+          "~@/assets/img/face11.png",
+          "~@/assets/img/face12.png"
+        ],
+        [
+          "~@/assets/img/face6.png",
+          "~@/assets/img/face7.png",
+          "~@/assets/img/face8.png",
+          "~@/assets/img/face9.png",
+          "~@/assets/img/face10.png",
+          "~@/assets/img/face11.png",
+          "~@/assets/img/face12.png"
+        ]
+      ]
+    };
   }
 }
 </script>
@@ -101,6 +114,54 @@ export default {
   width: 100%;
   height: 1650px;
   background-color: #020F22;
+
+  /* logos start */
+  @keyframes  slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%)
+    }
+  }
+  @keyframes  slide2 {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0)
+    }
+  }
+
+  .clients {
+    padding: 20px;
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 50px;
+    }
+
+    .scroll {
+      position: relative;
+      overflow: hidden;
+      padding: 20px 0;
+      white-space: nowrap;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+
+      .scroll-slide {
+        display: inline-block;
+        animation: 12s slide infinite linear;
+
+        img {
+          height: 150px;
+          margin: 0 40px;
+        }
+      }
+    }
+  }
+
+  /* logos end*/
 
   h1 {
     color: #fff;
