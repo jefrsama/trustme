@@ -4,15 +4,13 @@
       <div>
         <img src="../assets/img/Лого.svg" width="120%" alt="">
       </div>
-      <div class="">
-        <ul class="nav gap-15">
+        <ul class="nav">
           <li class="nav-item"><a href="#" class="nav-link text-white">О компании</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-white">Сервисы</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-white">Инвестиции</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-white">Карьера</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-white">Новости</a></li>
         </ul>
-      </div>
       <div>
         <Dropdown v-model="selectedCityValue" :options="selectedCity" optionValue="value" optionLabel="label" @change="changeLanguage()" class="w-full md:w-14rem"></Dropdown>
       </div>
@@ -49,7 +47,7 @@ export default {
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 header {
   font-family: Monrope, sans-serif;
   margin: 0;
@@ -61,7 +59,20 @@ header {
   height: 61px;
 }
 
+@media only screen and (max-width: 992px) {
+  li {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  li {
+    font-size: 8px;
+    visibility: hidden;
+  }
+}
+
 .gap-15 {
-  gap: 20px;
+  gap: 15px;
 }
 </style>
