@@ -1,12 +1,12 @@
 <template>
   <section class="wrapper-block-three">
     <div class="container m-auto">
-      <div class="inner-content align-items-center">
-        <div class="w-100 d-flex justify-content-between align-items-center">
-          <h1 class="text-start text-white py-5">Экосистема доверия <span>TrustMe</span></h1>
+      <div class="inner-content">
+        <div class="w-100 d-flex justify-content-between align-items-center head">
+          <h1 class=" text-white py-2">Экосистема доверия <span>TrustMe</span></h1>
           <button>Узнать больше о TrustMe</button>
         </div>
-        <div class="w-100 d-flex justify-content-between align-items-center">
+        <div class="w-100 flex-wrap gap-20 d-flex justify-content-between align-items-center">
           <div class="inner_card">
             <img src="~@/assets/img/icon1.svg" alt="">
             <h3 class="pt-3">Миссия</h3>
@@ -22,8 +22,6 @@
             <h3 class="pt-3">Технологии</h3>
             <p class="pt-3">SmartContract, Blockchain, AI и другие технологии</p>
           </div>
-        </div>
-        <div class="w-100 d-flex justify-content-between align-items-center pt-4">
           <div class="inner_long_card d-flex">
             <div style="width: 60%;">
               <img src="~@/assets/img/icon4.svg" alt="">
@@ -45,7 +43,7 @@
 
       <div class="achievements w-100 py-5 mt-5">
         <h1 class="py-5">Наши достижения</h1>
-        <div class="d-flex w-100 justify-content-between align-items-center">
+        <div class="d-flex w-100 flex-wrap gap-20 justify-content-between align-items-center">
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach1.png" alt="">
             <h5 class="py-3">Вошли <span>в TОП-10 стартапов</span> в Кремниевой долине, США</h5>
@@ -68,25 +66,24 @@
               <img width="64px" src="~@/assets/img/uzbekistan.png" alt="">
             </div>
           </div>
-        </div>
-        <div class="d-flex w-100 justify-content-between align-items-center flex-wrap py-4">
-          <div class="achievements_inner_card_two">
+          <div class="achievements_inner_card">
             <h5 class="py-3">Прошли <span>в 15 лучших</span> из Центральной Азии в 2023 году</h5>
-            <img class="pt-4" src="~@/assets/img/silkway.png" alt="">
-            <img class="py-4" src="~@/assets/img/google.png" alt="">
-            <img src="~@/assets/img/astana-hub.png" alt="">
+            <div>
+              <img class="pt-4" src="~@/assets/img/silkway.png" alt="">
+              <img class="py-4" src="~@/assets/img/google.png" alt="">
+              <img src="~@/assets/img/astana-hub.png" alt="">
+            </div>
           </div>
-          <div class="achievements_inner_card_two">
+          <div class="achievements_inner_card">
             <img src="~@/assets/img/ach4.png" alt="">
             <h5 class="py-3"><span>Лучший blockchain проект</span> Казахстана</h5>
           </div>
-          <div class="achievements_inner_card_two">
+          <div class="achievements_inner_card">
             <img src="~@/assets/img/ach5.png" alt="">
             <h5 class="py-3">Открыли зарубежный офис в Узбекистане</h5>
           </div>
         </div>
-
-        <div class="achievements_inner_card_three">
+        <div class="achievements_inner_card_three mt-4">
           <h5><span>В ТОП-10 стартапов</span> Центральной Азии на Digital Bridge 2023</h5>
           <div class="d-flex justify-content-between align-items-center pt-3">
             <img src="~@/assets/img/ach6png.png" alt="">
@@ -116,7 +113,7 @@ export default {
     content: '';
     position: absolute;
     top: 3%;
-    right: 8em;
+    right: 0em;
     width: 1px;
     height: 1px;
     border-radius: 50%;
@@ -133,6 +130,7 @@ export default {
     border-radius: 50%;
     box-shadow:5em -15em 30em 15em rgba(120, 214, 214, 0.25);
   }
+
   h1 {
     font-size: 42px;
     font-weight: 700;
@@ -159,7 +157,48 @@ export default {
   .inner_card {
     text-align: start;
     padding: 40px 40px;
-    width: 410px;
+    width: 32%;
+    height: 354px;
+    border: 1px solid #17B2B233;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
+    h3 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      text-align: left;
+      color: #B5BDBE;
+    }
+
+    button {
+      width: 198px;
+      height: 61px;
+      padding: 0 32px 0 32px;
+      border-radius: 32px;
+      gap: 10px;
+      background: none;
+      border: 1px solid #159F9F;
+      color: #159F9F;
+    }
+  }
+
+  .inner_long_card {
+    text-align: start;
+    padding: 40px 40px;
+    width: 66%;
     height: 354px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
@@ -184,17 +223,15 @@ export default {
       text-align: left;
       color: #B5BDBE;
 
+      a {
+        color: #0EB6B6;
+        text-transform: none;
+        text-decoration: none;
+      }
     }
 
-    button {
-      width: 198px;
-      height: 61px;
-      padding: 0 32px 0 32px;
-      border-radius: 32px;
-      gap: 10px;
-      background: none;
-      border: 1px solid #159F9F;
-      color: #159F9F;
+    img:last-child {
+      opacity: 0.5;
     }
   }
 
@@ -208,19 +245,18 @@ export default {
       width: 1px;
       height: 1px;
       border-radius: 50%;
-      box-shadow:5em -15em 30em 15em rgba(120, 214, 214, 0.25);
+      box-shadow: 5em -15em 30em 15em rgba(120, 214, 214, 0.25);
     }
     &::after {
       content: '';
       position: absolute;
       top: 5%;
-      right: -15em;
+      right: 0em;
       width: 0.5px;
       height: 0.5px;
       border-radius: 50%;
       box-shadow: -5em 10em 30em 15em rgba(120, 214, 214, 0.25);
     }
-
 
     h1 {
       font-size: 42px;
@@ -267,7 +303,7 @@ export default {
     }
   }
 
-  .achievements_inner_card_two {
+  .achievements_inner_card:nth-child(n+4) {
     padding: 40px 40px;
     width: 410px;
     height: 444px;
@@ -319,11 +355,437 @@ export default {
     }
   }
 
-  .inner_long_card {
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrapper-block-three {
+    background-color: #020F22;
+    width: 100%;
+    height: 2504px;
+    position: relative;
+
+    .inner_card {
+      text-align: start;
+      padding: 20px;
+      width: 31.5%;
+      height: 354px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+    }
+
+    .inner_long_card {
+      text-align: start;
+      padding: 20px;
+      width: 66%;
+      height: 354px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
+      h3 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        color: #B5BDBE;
+
+        a {
+          color: #0EB6B6;
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+
+      img:last-child {
+        opacity: 0.5;
+      }
+    }
+
+    .achievements_inner_card{
+      padding: 15px;
+      width: 32%;
+      height: 584px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      img {
+        width: 100%;
+      }
+      div {
+        img {
+          width: 100px;
+          height: 50px;
+        }
+      }
+    }
+
+    .achievements_inner_card:nth-child(3){
+      div {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .achievements_inner_card:nth-child(n + 4) {
+      padding: 20px;
+      width: 32%;
+      height: 444px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
+      div {
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 50%;
+          height: 40%;
+        }
+      }
+    }
+
+    .achievements_inner_card_three{
+      padding: 20px;
+      width: 100%;
+      height: 240px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      
+      img {
+        width: 32%;
+      }
+      
+      h5 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 33px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+
+        span {
+          color: #0EB6B6;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper-block-three {
+    background-color: #020F22;
+    width: 100%;
+    height: 2504px;
+    position: relative;
+    .inner_card {
+      text-align: start;
+      padding: 20px;
+      width: 31.5%;
+      height: 354px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+        color: #B5BDBE;
+      }
+    }
+    .inner_long_card {
+      text-align: start;
+      padding: 20px;
+      width: 66%;
+      height: 354px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
+      h3 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+        color: #B5BDBE;
+      }
+    }
+
+    .achievements_inner_card{
+      padding: 15px;
+      width: 31.5%;
+      height: 584px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      img {
+        width: 100%;
+      }
+      div {
+        img {
+          width: 100px;
+          height: 50px;
+        }
+      }
+    }
+    .achievements_inner_card:nth-child(n + 4){
+      padding: 15px;
+      width: 31.5%;
+      height: 364px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      img {
+        width: 100%;
+      }
+      div {
+        img {
+          width: 50%;
+          height: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper-block-three {
+    background-color: #020F22;
+    width: 100%;
+    height: 3054px;
+    position: relative;
+
+    .inner-content {
+      .head {
+        padding: 30px 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .inner_card {
+      text-align: start;
+      padding: 20px;
+      width: 31%;
+      height: 354px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 26px;
+        text-align: left;
+        color: #fff;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: #B5BDBE;
+      }
+      button {
+        font-size: 13px;
+        width: 158px;
+        height: 41px;
+        padding: 0 32px 0 32px;
+        border-radius: 32px;
+        gap: 10px;
+        background: none;
+        border: 1px solid #159F9F;
+        color: #159F9F;
+      }
+    }
+
+    .inner_long_card {
+      text-align: start;
+      padding: 20px;
+      width: 66%;
+      height: 354px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      
+      div:first-child {
+        width: 500px;
+      }
+
+      div:last-child {
+        img {
+          width: 100%;
+        }
+      }
+      
+      h3 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: #B5BDBE;
+      }
+    }
+
+    .achievements_inner_card{
+      padding: 15px;
+      width: 48%;
+      height: 584px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      img {
+        width: 100%;
+      }
+      div {
+        img {
+          width: 100px;
+          height: 50px;
+        }
+      }
+    }
+    .achievements_inner_card:nth-child(4){
+      width: 48%;
+      height: 584px;
+      div {
+        img {
+          width: 50%;
+          height: 40%;
+        }
+      }
+    }
+    .achievements_inner_card:nth-child(n + 5){
+      padding: 15px;
+      width: 48%;
+      height: 364px;
+      border: 1px solid #17B2B233;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      img {
+        width: 100%;
+      }
+      div {
+        img {
+          width: 50%;
+          height: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-block-three {
+    height: 3700px;
+    .inner-content {
+      .head {
+        padding: 30px 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+  .inner_card {
     text-align: start;
-    padding: 40px 40px;
-    width: 854px;
-    height: 354px;
+    padding: 20px;
+    width: 100%;
+    height: 240px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
@@ -332,6 +794,36 @@ export default {
     backdrop-filter: blur(20px);
     border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
 
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 26px;
+      text-align: left;
+      color: #fff;
+    }
+    p {
+      font-size: 13px;
+      font-weight: 400;
+      text-align: left;
+      color: #B5BDBE;
+    }
+    button {
+      font-size: 10px;
+      width: 118px;
+      height: 31px;
+      padding: 0 22px 0 22px;
+      border-radius: 32px;
+      gap: 10px;
+      background: none;
+      border: 1px solid #159F9F;
+      color: #159F9F;
+    }
+  }
+
+  .inner_long_card {
+    padding: 20px;
+    width: 100%;
+    height: 240px;
     h3 {
       font-size: 28px;
       font-weight: 600;
@@ -342,23 +834,15 @@ export default {
     }
 
     p {
-      font-size: 20px;
+      font-size: 13px;
       font-weight: 400;
       text-align: left;
       color: #B5BDBE;
-
-      a {
-        color: #0EB6B6;
-        text-transform: none;
-        text-decoration: none;
       }
-    }
-
-    img:last-child {
-      opacity: 0.5;
     }
   }
 }
+
 .gap-20 {
  gap: 20px;
 }

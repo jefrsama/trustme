@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper-block-eight">
-    <img class="bg" src="../../../assets/img/partofBG.png" alt="">
+    <img class="bg" src="~@/assets/img/partofBG.png" alt="">
     <div class="light-container_back"></div>
     <div class="container">
       <div class="light-container"></div>
@@ -202,6 +202,13 @@ export default {
     letter-spacing: 0em;
     text-align: center;
     color: #B5BDBE;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .wrapper-block-eight {
+    .bg{
+      width: 100%;
+    }
   }
 }
 </style>

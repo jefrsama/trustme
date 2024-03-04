@@ -2,13 +2,13 @@
   <section class="wrapper-block-two d-flex justify-content-center">
     <div class="container m-auto">
       <div class="inner_card">
-        <h2 class="text-center text-white">Инвестируйте в стартап с большим будущим!</h2>
-        <div class="d-flex justify-content-between mt-5 gap-45">
+        <h2 class="text-center text-white mt-3">Инвестируйте в стартап с большим будущим!</h2>
+        <div class="d-flex justify-content-between mt-4 gap-45">
           <img src="~@/assets/img/IMG.png" alt="" class="">
           <div>
             <p class="text-white">“Начав свой путь в 2020 году как платформа для отзывов и рекомендаций, <a href="#">TrustMe</a> на сегодняшний день стала популярной площадкой, используемой как юридическими, так и физическими лицами в Казахстане. В декабре 2021 года мы запустили онлайн-сервис подписания договоров —
               <a href="#">TrustContract</a>”.</p>
-            <p class="text-white mt-5">Чингиз Даулетбаев <span>— основатель и CEO Экосистемы Доверия TrustMe.</span></p>
+            <p class="text-white mt-2">Чингиз Даулетбаев <span>— основатель и CEO Экосистемы Доверия TrustMe.</span></p>
           </div>
         </div>
       </div>
@@ -22,12 +22,13 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .wrapper-block-two {
   width: 100%;
   height: 583px;
   background-color: #020F22;
-z-index: -1;
+  z-index: -1;
+
   h2 {
     font-size: 42px;
     font-weight: 700;
@@ -38,12 +39,16 @@ z-index: -1;
   .inner_card{
     padding: 48px;
     width: 100%;
-    height: 423px;
+    height: 453px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+
+    img {
+      width: 45%;
+    }
   }
 
   div {
@@ -69,6 +74,198 @@ z-index: -1;
     }
   }
 }
+@media only screen and (max-width: 1400px) {
+  .wrapper-block-two {
+    
+    .inner_card {
+      padding: 48px;
+      width: 100%;
+      height: 523px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper-block-two {
+    width: 100%;
+    height: 583px;
+    background-color: #020F22;
+    z-index: -1;
+
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .inner_card{
+      padding: 22px;
+      width: 100%;
+      height: 423px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      
+      img {
+        width: 40%;
+      }
+    }
+    
+    div {
+      p:first-child {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 36px;
+
+        a {
+          color: #0EB6B6;
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+      p:last-child {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+
+        span {
+          color: #B5BDBE;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper-block-two {
+    width: 100%;
+    height: 783px;
+    background-color: #020F22;
+    z-index: -1;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 50px;
+      text-align: center;
+    }
+    .inner_card {
+      padding: 22px;
+      width: 100%;
+      height: 693px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+
+      img {
+        width: 100%;
+        height: 320px;
+      }
+
+      div {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+      }
+    }
+    div {
+      p:first-child {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 36px;
+
+        a {
+          color: #0EB6B6;
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+      p:last-child {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+
+        span {
+          color: #B5BDBE;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-block-two {
+    width: 100%;
+    height: 783px ;
+    background-color: #020F22;
+    z-index: -1;
+
+    h2 {
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+    }
+    .inner_card {
+      padding: 22px;
+      width: 100%;
+      height: 693px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+
+      img {
+        width: 100%;
+        height: 240px;
+      }
+
+      div {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+      }
+    }
+    div {
+      p:first-child {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 36px;
+
+        a {
+          color: #0EB6B6;
+          text-transform: none;
+          text-decoration: none;
+        }
+      }
+      p:last-child {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+
+        span {
+          color: #B5BDBE;
+        }
+      }
+    }
+  }
+}
+
 .gap-45 {
   gap: 45px;
 }

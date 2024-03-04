@@ -5,7 +5,7 @@
       <img class="img" src="../../../assets/img/bg16.png" alt="">
       <img class="img" src="../../../assets/img/map.png" alt="">
       <div class="x-sixteen">
-        <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center text-center">
           <div class="my-5">
             <h1>x16</h1>
             <img src="~@/assets/img/Vector.svg" alt="">
@@ -13,30 +13,30 @@
           <h3>Во столько раз мы должны вырасти в 2024 году,</h3>
           <p>увеличив стоимость компании до <span>$150 млн</span></p>
         </div>
+      </div>
+      <div class="container flex-wrap gap-15 d-flex justify-content-between pb-5 inner_cards">
+        <div class="inner_card">
+          <img src="~@/assets/img/iconn1.png" alt="">
+          <h2 class="">Новые рынки</h2>
+          <p class="">Турция, Саудовская Аравия, США и другие страны</p>
+        </div>
+        <div class="inner_card">
+          <img src="~@/assets/img/iconn2.png" alt="">
+          <h2 class="">Новые продукты</h2>
+          <p class="">TrustMe AI, Big Data и Data Science</p>
+        </div>
+        <div class="inner_card">
+          <img src="~@/assets/img/iconn3.png" alt="">
+          <h2 class="">Высокий спрос</h2>
+          <p class="">несмотря на конкуренцию (DocuSign, AdobeSign)</p>
+        </div>
+        <div class="inner_card">
+          <img src="~@/assets/img/iconn4.png" alt="">
+          <h2>Задача</h2>
+          <p>Масштабироваться по миру, став лидером по подписанию договоров</p>
+        </div>
+      </div>
 
-      </div>
-    </div>
-    <div class="container d-flex justify-content-between pb-5">
-      <div class="inner_card">
-        <img src="../../../assets/img/iconn1.png" alt="">
-        <h2 class="">Новые рынки</h2>
-        <p class="">Турция, Саудовская Аравия, США и другие страны</p>
-      </div>
-      <div class="inner_card">
-        <img src="../../../assets/img/iconn2.png" alt="">
-        <h2 class="">Новые продукты</h2>
-        <p class="">TrustMe AI, Big Data и Data Science</p>
-      </div>
-      <div class="inner_card">
-        <img src="../../../assets/img/iconn3.png" alt="">
-        <h2 class="">Высокий спрос</h2>
-        <p class="">несмотря на конкуренцию (DocuSign, AdobeSign)</p>
-      </div>
-      <div class="inner_card">
-        <img src="../../../assets/img/iconn4.png" alt="">
-        <h2>Задача</h2>
-        <p>Масштабироваться по миру, став лидером по подписанию договоров</p>
-      </div>
     </div>
   </section>
 </template>
@@ -75,14 +75,14 @@ export default {
   }
   .img {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .x-sixteen {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -133,13 +133,17 @@ export default {
   }
 
   .title {
-    padding-top: 150px;
+    padding-top: 50px;
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
     letter-spacing: 0px;
     text-align: center;
     color: #fff;
+  }
+
+  .inner_cards{
+    margin-top: 650px;
   }
   .inner_card {
     padding: 30px;
@@ -159,7 +163,7 @@ export default {
     h2 {
       font-size: 28px;
       font-weight: 600;
-      line-height: 38px;
+      line-height: 30px;
       letter-spacing: 0em;
       text-align: center;
       color: #fff;
@@ -168,10 +172,86 @@ export default {
       font-family: Manrope sans-serif;
       font-size: 19px;
       font-weight: 400;
-      line-height: 25px;
+      line-height: 20px;
       letter-spacing: 0em;
       text-align: center;
       color: rgba(181, 189, 190, 1);
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrapper-block-seven {
+
+    .inner_card {
+      width: 23%;
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper-block-seven {
+    .title {
+      padding-top: 100px;
+    }
+    .img{
+      top: 45%;
+      width: 100%;
+    } 
+    .x-sixteen {
+      top: 45%;
+    }
+    .inner_cards {
+      margin-top: 700px;
+    }
+    .inner_card {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper-block-seven {
+    height: 1500px;
+    .inner_cards {
+      margin-top: 700px;
+    }
+
+    .img {
+      top: 33%;
+      width: 100%;
+    }
+
+    .x-sixteen {
+      top: 33%;
+    }
+    
+    .inner_card {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 48%;
+      height: 255px;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 15px;
+      }
     }
   }
 }

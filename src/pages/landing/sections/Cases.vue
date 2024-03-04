@@ -6,19 +6,15 @@
         <h1>Кейсы TrustContract</h1>
         <p class="pt-3">Отзывы наших клиентов</p>
       </div>
-
+      <img class="bg" src="~@/assets/img/BG-cases.png" alt="">
       <swiper
           :slidesPerView="3"
-          :spaceBetween="60"
+          :spaceBetween="30"
           :loop="true"
           :modules="modules"
           class="mySwiper"
           navigation
       >
-
-
-
-
         <swiper-slide>
           <div class="card">
             <h2 class="pt-4">Bramf</h2>
@@ -66,7 +62,7 @@
 
       <div class="smi text-white text-center mt-5">
         <h1 class="">О нас говорят в СМИ</h1>
-        <div class="d-flex justify-content-between align-items-center mt-5">
+        <div class="d-flex gap-15 flex-wrap justify-content-between align-items-center mt-5">
           <div class="inner_card">
             <img src="~@/assets/img/smi1.png" alt="">
             <button>Прочитать</button>
@@ -87,8 +83,6 @@
             <img src="~@/assets/img/smi5.png" alt="">
             <button>Прочитать</button>
           </div>
-        </div>
-        <div class="d-flex justify-content-between align-items-center mt-4">
           <div class="inner_long_card_two">
             <img src="~@/assets/img/smi6.png" alt="">
             <button>Прочитать</button>
@@ -151,7 +145,7 @@ export default {
   padding-top: 40px;
   width: 100%;
   position: relative;
-  height: auto;
+  height: 2000px;
   background-color: #020F22;
 
   &::before {
@@ -230,110 +224,7 @@ export default {
     transform-style: preserve-3d;
   }
   /* CSS Mode */
-  .swiper-css-mode > .swiper-wrapper {
-    overflow: auto;
-    scrollbar-width: none;
-    /* For Firefox */
-    -ms-overflow-style: none;
-    /* For Internet Explorer and Edge */
-  }
-  .swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-  .swiper-css-mode > .swiper-wrapper > .swiper-slide {
-    scroll-snap-align: start start;
-  }
-  .swiper-css-mode.swiper-horizontal > .swiper-wrapper {
-    scroll-snap-type: x mandatory;
-  }
-  .swiper-css-mode.swiper-vertical > .swiper-wrapper {
-    scroll-snap-type: y mandatory;
-  }
-  .swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-    scroll-snap-type: none;
-  }
-  .swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-    scroll-snap-align: none;
-  }
-  .swiper-css-mode.swiper-centered > .swiper-wrapper::before {
-    content: '';
-    flex-shrink: 0;
-    order: 9999;
-  }
-  .swiper-css-mode.swiper-centered > .swiper-wrapper > .swiper-slide {
-    scroll-snap-align: center center;
-    scroll-snap-stop: always;
-  }
-  .swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
-    margin-inline-start: var(--swiper-centered-offset-before);
-  }
-  .swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper::before {
-    height: 100%;
-    min-height: 1px;
-    width: var(--swiper-centered-offset-after);
-  }
-  .swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
-    margin-block-start: var(--swiper-centered-offset-before);
-  }
-  .swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper::before {
-    width: 100%;
-    min-width: 1px;
-    height: var(--swiper-centered-offset-after);
-  }
-  /* Slide styles start */
-  /* 3D Shadows */
-  .swiper-3d .swiper-slide-shadow,
-  .swiper-3d .swiper-slide-shadow-left,
-  .swiper-3d .swiper-slide-shadow-right,
-  .swiper-3d .swiper-slide-shadow-top,
-  .swiper-3d .swiper-slide-shadow-bottom,
-  .swiper-3d .swiper-slide-shadow,
-  .swiper-3d .swiper-slide-shadow-left,
-  .swiper-3d .swiper-slide-shadow-right,
-  .swiper-3d .swiper-slide-shadow-top,
-  .swiper-3d .swiper-slide-shadow-bottom {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-  }
-  .swiper-3d .swiper-slide-shadow {
-    background: rgba(0, 0, 0, 0.15);
-  }
-  .swiper-3d .swiper-slide-shadow-left {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  }
-  .swiper-3d .swiper-slide-shadow-right {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  }
-  .swiper-3d .swiper-slide-shadow-top {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  }
-  .swiper-3d .swiper-slide-shadow-bottom {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  }
-  .swiper-lazy-preloader {
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -21px;
-    margin-top: -21px;
-    z-index: 10;
-    transform-origin: 50%;
-    box-sizing: border-box;
-    border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
-    border-radius: 50%;
-    border-top-color: transparent;
-  }
-  .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,
-  .swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader {
-    animation: swiper-preloader-spin 1s infinite linear;
-  }
+
   .swiper-lazy-preloader-white {
     --swiper-preloader-color: #fff;
   }
@@ -365,12 +256,12 @@ export default {
   .swiper-button-prev,
   .swiper-rtl .swiper-button-next {
     top: 22%;
-    left: 220px;
+    left: 14%;
   }
   .swiper-button-next,
   .swiper-rtl .swiper-button-prev {
     top: 22%;
-    right: 220px;
+    right: 14%;
     content: '';
   }
 
@@ -583,26 +474,6 @@ export default {
       color: rgba(253, 253, 253, 1);
     }
   }
-  .swiper-navBtn{
-    width: 40px;
-    height: 40px;
-    top: 517px;
-    padding: 10px;
-    border-radius: 30px;
-    background-color: rgba(113, 113, 116, 1);;
-    color: rgba(113, 113, 116, 0.6);
-  }
-
-  .swiper-button-nextt{
-    position: absolute;
-    top: 20%;
-    right: 12%;
-  }
-  .swiper-button-prevv{
-    position: absolute;
-    top: 20%;
-    left: 12%;
-  }
 
   .smi {
     width: 100%;
@@ -613,7 +484,7 @@ export default {
       content: '';
       position: absolute;
       top: -50%;
-      right: -15%;
+      right: 0;
       width: 1px;
       height: 1px;
       border-radius: 50%;
@@ -643,8 +514,11 @@ export default {
     }
 
     .inner_card {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       padding: 20px 20px;
-      width: 245px;
+      width: 19%;
       height: 225px;
       border: 1px solid #17B2B233;
       border-radius: 12px;
@@ -674,4 +548,168 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 1400px) {
+
+  .wrapper-block-five {
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+      top: 22%;
+      left: 5%;
+    }
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+      right: 5%;
+    }
+    .smi {
+
+      .inner_card {
+        padding: 20px 20px;
+        width: 18%;
+        height: 225px;
+        border: 1px solid #17B2B233;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+      }
+
+      .inner_long_card_two {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        width: 48.5%;
+        height: 225px;
+        border: 1px solid #17B2B233;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+
+        img {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper-block-five {
+    .smi {
+      button {
+        width: 121px;
+        height: 39px;
+        padding: 0 22px 0 22px;
+        border-radius: 32px;
+        background: none;
+        border: 1px solid #159F9F;
+        color: #159F9F;
+      }
+      .inner_card {
+        padding: 20px 20px;
+        width: 18%;
+        height: 185px;
+        border: 1px solid #17B2B233;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+      }
+
+      .inner_long_card_two {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        width: 48.5%;
+        height: 185px;
+        border: 1px solid #17B2B233;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+
+  .wrapper-block-five {
+    height: 1950px;
+    .smi {
+      button {
+        font-size: 13px;
+        width: 100px;
+        height: 39px;
+        padding: 0 5px;
+      }
+      .inner_card {
+        padding: 20px 20px;
+        width: 18%;
+        height: 185px;
+      }
+
+      .inner_long_card_two {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        width: 48.5%;
+        height: 165px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper-block-five {
+    height: 2350px;
+    .bg {
+      width: 90%;
+    }
+    .smi {
+      button {
+        font-size: 13px;
+        width: 100px;
+        height: 39px;
+        padding: 0 5px;
+      }
+      .inner_card {
+        padding: 20px 20px;
+        width: 48.5%;
+        height: 185px;
+      }
+      .inner_long_card_two {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        width: 48.5%;
+        height: 185px;
+        border: 1px solid #17B2B233;
+        border-radius: 12px;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .inner_long_card_two:last-child {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        height: 185px;
+      }
+    }
+  }
+}
+
 </style>

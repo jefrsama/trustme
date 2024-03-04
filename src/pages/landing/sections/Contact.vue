@@ -181,4 +181,91 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 1400px) {
+  .wrapper-block-nine {
+
+    .inner_content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+
+      .inner_card {
+        border-radius: 12px;
+        padding: 24px;
+        width: 23.5%;
+      
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper-block-nine {
+    height: 1700px;
+    
+    .inner_long_card{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 238px;
+      top: 80px;
+      left: 116px;
+      padding: 35px;
+      border-color: #0EB6B6;
+
+      button {
+        font-family: Monrope, sans-serif;
+        border-radius: 32px;
+        width: 200px;
+        height: 61px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #fff;
+        background-color: #159F9F;
+      }
+
+      h1 {
+        font-family: Monrope, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #FFF;
+      }
+      p{
+        font-family: Monrope, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+    }
+    .inner_content {
+      display: flex;
+      flex-wrap: wrap;
+
+      .inner_card {
+        border-radius: 12px;
+        padding: 24px;
+        width: 48.5%;
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
 </style>

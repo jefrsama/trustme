@@ -2,7 +2,7 @@
   <section class="wrapper-block-six">
     <div class="container text-center">
       <h1 class="py-5">Капитал и Инвесторы</h1>
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex flex-wrap gap-15 justify-content-between align-items-center">
         <div class="inner_long_card">
           <img src="~@/assets/img/capital-icon1.png" class="mt-4" alt="">
           <h1>$600 000 инвестиций</h1>
@@ -17,7 +17,7 @@
       <button class="my-5">Стать инвестором</button>
 
       <h1 class="mt-5">Нам доверяют более 20 инвесторов из разных стран</h1>
-      <div class="d-flex justify-content-between align-items-center my-5">
+      <div class="d-flex flex-wrap gap-15 justify-content-between align-items-center my-5">
         <div class="inner_card">
           <div>
             <img class="gap-25" src="~@/assets/img/face1.png" alt="">
@@ -72,7 +72,6 @@
       </div>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -336,6 +335,127 @@ export default {
   .imgBox img {
     width: 80%;
     padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .wrapper-block-six {
+
+    .inner_card {
+      width: 23%;
+      }
+
+    .inner_long_card {
+      text-align: center;
+      width: 49%;
+      height: 305px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .wrapper-block-six {
+    height: 1700px;
+
+    .inner_card {
+      position: relative;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 23%;
+      height: 470px;
+      text-align: center;
+      font-size: 1em;
+
+      div:last-child {
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        width: 200px;
+        height: 38px;
+        padding: 10px;
+        border-radius: 8px;
+        gap: 10px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .wrapper-block-six {
+    height: 3150px;
+
+    .inner_long_card {
+      text-align: center;
+      width: 100%;
+      height: 255px;
+    }
+    .inner_card {
+      position: relative;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 400px;
+      text-align: center;
+      font-size: 1em;
+
+      div {
+        h1 {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 33px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: #fff;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: rgba(14, 182, 182, 1);
+        }
+        h5 {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: #fff;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: rgba(231, 231, 231, 1);
+        }
+      }
+      div:last-child {
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        width: 200px;
+        height: 38px;
+        padding: 10px;
+        border-radius: 8px;
+        gap: 10px;
+        background-color: rgba(22, 45, 69, 1);
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: rgba(231, 231, 231, 1);
+      }
+    }
   }
 }
 </style>
