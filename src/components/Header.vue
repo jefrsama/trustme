@@ -12,14 +12,13 @@
           <li class="nav-item"><a href="#" class="nav-link text-white">Новости</a></li>
         </ul>
       <div>
-        <Dropdown v-model="selectedCityValue" :options="selectedCity" optionValue="value" optionLabel="label" @change="changeLanguage()" class="w-full md:w-14rem"></Dropdown>
+<!--        <Dropdown v-model="selectedCityValue" :options="selectedCity" optionValue="value" optionLabel="label" @change="changeLanguage()" class="w-full md:w-14rem"></Dropdown>-->
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import Dropdown from 'primevue/dropdown';
 import { locale } from "@/stores/i18nStore";
 
 export default {
@@ -28,7 +27,6 @@ export default {
     msg: String
   },
   components: {
-    Dropdown,
   },
   data() {
     return {
