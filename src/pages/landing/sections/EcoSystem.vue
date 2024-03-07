@@ -5,9 +5,9 @@
         <img src="~@/assets/img/Лого.svg" width="198px" height="41.25px" alt="">
       </div>
       <div class="mt-5">
-        <h1 class="text-white">Экосистема TrustMe</h1>
+        <h1 class="text-white">{{$t("landing.eco_system")}}</h1>
         <p class="mt-3">Инвестируйте <span>в самый быстрорастущий</span> стартап Центральной Азии</p>
-        <button class="mt-2">Стать инвестором</button>
+        <button class="mt-2">{{$t("landing.be_an_investor")}}</button>
       </div>
     </div>
       <img class="mockup" src="~@/assets/img/Browser.png" alt="">

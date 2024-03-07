@@ -2,17 +2,20 @@
   <header>
     <div class="container d-flex justify-content-between align-items-center">
       <div>
-        <img src="../assets/img/Лого.svg" width="120%" alt="">
+        <img src="../assets/img/Лого.svg" style="width: 120%;" alt="">
       </div>
         <ul class="nav">
-          <li class="nav-item"><a href="#" class="nav-link text-white">О компании</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-white">Сервисы</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-white">Инвестиции</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-white">Карьера</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-white">Новости</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">{{$t("landing.about_company")}}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">{{$t("landing.services")}}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">{{$t("landing.investment")}}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">{{$t("landing.career")}}</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">{{$t("landing.news")}}</a></li>
         </ul>
       <div>
-<!--        <Dropdown v-model="selectedCityValue" :options="selectedCity" optionValue="value" optionLabel="label" @change="changeLanguage()" class="w-full md:w-14rem"></Dropdown>-->
+        <select id="languageSelect" v-model="selectedCityValue" @change="changeLanguage()">
+          <option value="ru">ru</option>
+          <option value="kz">kz</option>
+        </select>
       </div>
     </div>
   </header>

@@ -4,16 +4,16 @@
       <div class="w-100">
         <div class="inner_long_card">
           <div>
-            <h1>Успейте инвестировать!</h1>
-            <p>Оставьте заявку и CEO лично свяжется с вами</p>
+            <h1>{{$t("landing.get_up_to_invest")}}</h1>
+            <p>{{$t("landing.ceo_personally_contact_you")}}</p>
           </div>
-          <button>Оставить заявку</button>
+          <button>{{$t("landing.submit_your_application")}}</button>
         </div>
       </div>
 
       <div class="inner_title mt-5">
-        <h3 class="pt-5">Контактная информация основателя</h3>
-        <p class="pt-3">Поделитесь возможностью - отправьте другим!</p>
+        <h3 class="pt-5">{{$t("landing.contact_info_of_head")}}</h3>
+        <p class="pt-3">{{$t("landing.take_an_opportunity_to_share")}}</p>
       </div>
       <div class="inner_content mt-5">
         <div class="inner_card">

@@ -5,60 +5,60 @@
     <div class="container" style="position: relative;">
       <div class="inner_content w-100">
         <h1>Trust<span>Contract</span></h1>
-        <p>Это самое быстрое и легкое E-Sign решение</p>
+        <p>{{$t("landing.eco_system")}}</p>
         <div class="d-flex gap-25 align-items-center flex-wrap pt-3 inner_wrap">
           <div class="inner_card">
             <img src="~@/assets/img/trust-icon1.png" alt="">
-            <h3 class="pt-3">5 способов подписания</h3>
+            <h3 class="pt-3">{{$t("landing.five_types_of_use")}}</h3>
             <ul>
-              <li>Мессенджер</li>
-              <li>SMS код</li>
-              <li>ЭЦП</li>
-              <li>Биометрия</li>
-              <li>Egov mobile</li>
+              <li>{{$t("landing.messenger")}}</li>
+              <li>{{$t("landing.sms_code")}}</li>
+              <li>{{$t("landing.ecp")}}</li>
+              <li>{{$t("landing.biometric")}}</li>
+              <li>{{$t("landing.egov_mobile")}}</li>
             </ul>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/trust-icon2.png" alt="">
-            <h3 class="pt-3">Используем технологии</h3>
+            <h3 class="pt-3">{{$t("landing.using_technology")}}</h3>
             <ul>
-              <li>Smart Contract</li>
-              <li>Blockchain</li>
-              <li>Egov mobile</li>
-              <li>QR подписания</li>
+              <li>{{$t("landing.using_technology")}}</li>
+              <li>{{$t("landing.smart_contract")}}</li>
+              <li>{{$t("landing.egov_mobile")}}</li>
+              <li>{{$t("landing.qr_sign")}}</li>
             </ul>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/trust-icon3.png" alt="">
-            <h3 class="pt-3">Мы подходим для</h3>
+            <h3 class="pt-3">{{$t("landing.we_can_be_to")}}</h3>
             <ul>
-              <li>B2B</li>
-              <li>B2C</li>
-              <li>B2G</li>
+              <li>{{$t("landing.b2b")}}</li>
+              <li>{{$t("landing.b2c")}}</li>
+              <li>{{$t("landing.b2g")}}</li>
             </ul>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/trust-icon4.png" alt="">
-            <h3 class="pt-3">Законность</h3>
-            <p>Электронное подписание документов является законным в более чем 100 странах мира</p>
+            <h3 class="pt-3">{{$t("landing.rule")}}</h3>
+            <p>{{$t("landing.online_sign_application_accepted_in_countries")}}</p>
           </div>
         </div>
-        <button class="mt-5">Узнать больше о TrustContract</button>
+        <button class="mt-5">{{$t("landing.get_more_about_trustcontract")}}</button>
       </div>
 
       <div class="w-100 d-flex flex-wrap justify-content-between align-items-center">
         <div class="inner_long_card text-center">
           <h1>1030</h1>
-          <p>Количество клиентов</p>
+          <p>{{$t("landing.quantity_of_clients")}}</p>
         </div>
         <div class="inner_long_card text-center">
           <h1>180 700</h1>
-          <p>Подписанных договоров</p>
+          <p>{{$t("landing.signed_agreements")}}</p>
         </div>
         <div class="inner_long_card text-center">
           <div>
             <h1>147 млн ₸</h1>
-            <p>Доходы за все время</p>
+            <p>{{$t("landing.earned_all_the_time")}}</p>
           </div>
         </div>
       </div>

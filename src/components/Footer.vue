@@ -3,38 +3,36 @@
     <div class="container m-auto">
       <div class="d-flex justify-content-between align-items-top first-container">
         <div class="footer_logo_container">
-          <div class="d-flex justify-content-between">
-            <img src="~@/assets/img/footer-logo.svg" width="200px" alt="">
-          </div>
-          <p class="pt-3">Сделаем этот мир лучше!</p>
+          <img src="@/assets/img/footer-logo.svg" width="100px" alt="">
+          <p class="pt-3">{{$t("landing.make_the_world_better")}}</p>
         </div>
         <div class="footer_second_container">
-          <h3>Сервисы</h3>
-          <p class="mt-3">TrustContract</p>
+          <h3>{{$t("landing.services")}}</h3>
+          <p class="mt-3">{{$t("landing.TrustContract")}}</p>
         </div>
         <div class="footer_third_container">
-          <h3>Контакты</h3>
+          <h3>{{$t("landing.contacts")}}</h3>
           <div class="d-flex gap-15 align-items-center">
             <img src="~@/assets/img/footer-icon1.svg" alt="">
-            <p class="pt-3">г. Астана. просп. Кабанбай Батыра 49</p>
+            <p class="pt-3">{{$t("landing.address")}}</p>
           </div>
           <div class="d-flex gap-15 align-items-center">
             <img src="~@/assets/img/footer-icon2.svg" alt="">
-            <p class="pt-3">ceo.trustme@gmail.com</p>
+            <p class="pt-3">{{$t("landing.email")}}</p>
           </div>
           <div class="d-flex gap-15 align-items-center">
             <img src="~@/assets/img/footer-icon3.svg" alt="">
-            <p class="pt-3">Отдел продаж: +7 (707)-111-09-50</p>
+            <p class="pt-3">{{$t("landing.sale_department")}}</p>
           </div>
           <div class="d-flex gap-15 align-items-center">
             <img src="~@/assets/img/footer-icon4.svg" alt="">
-            <p class="pt-3">Техподдержка: +7 (707)-412-84-12</p>
+            <p class="pt-3">{{$t("landing.tech_support")}}</p>
           </div>
         </div>
         <div class="footer_four_container">
-          <p>Политика конфидециальности</p>
-          <p>Пользовательское соглашение</p>
-          <p>Публичная оферта</p>
+          <p>{{$t("landing.politic_of_confidence")}}</p>
+          <p>{{$t("landing.terms_of_use")}}</p>
+          <p>{{$t("landing.public_offer")}}</p>
         </div>
       </div>
     </div>

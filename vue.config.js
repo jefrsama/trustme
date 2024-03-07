@@ -5,8 +5,11 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src')
+        '@': resolve(__dirname, 'src'),
       }
+    },
+    devServer: {
+      port: 8080,
     }
   }
 };

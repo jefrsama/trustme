@@ -4,23 +4,23 @@
     <div class="light-container_back"></div>
     <div class="container">
       <div class="light-container"></div>
-      <h1 class="h1">Станьте частью TrustMe</h1>
-      <p class="py-3 text">Уважаемые инвесторы, мы приглашаем:</p>
+      <h1 class="h1">{{$t("landing.become_part_of_trustme")}}</h1>
+      <p class="py-3 text">{{$t("landing.investors_we_invite")}}</p>
       <div class="d-flex justify-content-center align-items-center gap-70 mt-5">
         <div class="inner_card">
-          <h3>Трех бизнес-ангелов по</h3>
+          <h3>{{$t("landing.three_business_angels")}}</h3>
           <h1>$100.000</h1>
-          <p>по оценке в $20 млн</p>
+          <p>{{$t("landing.estimated_at_20_millions")}}</p>
         </div>
         <div class="inner_card">
-          <h3>Венчурный фонд</h3>
+          <h3>{{$t("landing.venture_fund")}}</h3>
           <h1>$400.000</h1>
-          <p>по оценке в $15 млн</p>
+          <p>{{$t("landing.estimated_at_15_millions")}}</p>
         </div>
       </div>
     </div>
     <button class="d-flex justify-content-center align-items-center">
-      Стать инвестором
+      {{$t("landing.be_an_investor")}}
       <span>
           <svg width="19" height="29" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6023 4.88253C10.8219 4.66286 11.1781 4.66286 11.3977 4.88253L15.8977 9.38253C16.1174 9.6022 16.1174 9.95835 15.8977 10.178L11.3977 14.678C11.1781 14.8977 10.8219 14.8977 10.6023 14.678C10.3826 14.4584 10.3826 14.1022 10.6023 13.8825L14.142 10.3428H3.5C3.18934 10.3428 2.9375 10.0909 2.9375 9.78027C2.9375 9.46961 3.18934 9.21777 3.5 9.21777H14.142L10.6023 5.67802C10.3826 5.45835 10.3826 5.1022 10.6023 4.88253Z" fill="#FDFDFD"/>

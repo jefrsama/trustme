@@ -1,22 +1,22 @@
 <template>
   <section class="wrapper-block-six">
     <div class="container text-center">
-      <h1 class="py-5">Капитал и Инвесторы</h1>
+      <h1 class="py-5">{{$t("landing.capital_and_investors")}}</h1>
       <div class="d-flex flex-wrap gap-15 justify-content-between align-items-center">
         <div class="inner_long_card">
           <img src="~@/assets/img/capital-icon1.png" class="mt-4" alt="">
-          <h1>$600 000 инвестиций</h1>
-          <p>привлекли на данный момент</p>
+          <h1>{{$t("landing.six_thousand_invest")}}</h1>
+          <p>{{$t("landing.get_right_now")}}</p>
         </div>
         <div class="inner_long_card">
           <img src="~@/assets/img/capital-icon2.png" class="mt-4" alt="">
           <h1>с <span>$2,5</span> млн до <span>$15 млн</span></h1>
-          <p>рост оценки компании с 2021 по 2023 годы</p>
+          <p>{{$t("landing.grow_up_from_21_to_23")}}</p>
         </div>
       </div>
-      <button class="my-5">Стать инвестором</button>
+      <button class="my-5">{{$t("landing.be_an_investor")}}</button>
 
-      <h1 class="mt-5">Нам доверяют более 20 инвесторов из разных стран</h1>
+      <h1 class="mt-5">{{$t("landing.we_are_in_believe_to_20_investors")}}</h1>
       <div class="d-flex flex-wrap gap-15 justify-content-between align-items-center my-5">
         <div class="inner_card">
           <div>

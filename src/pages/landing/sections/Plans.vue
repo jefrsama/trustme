@@ -1,42 +1,41 @@
 <template>
   <section class="wrapper-block-seven d-flex flex-column justify-content-between">
     <div class="container">
-      <h1 class="title">Планы на 2024 год</h1>
-      <img class="img" src="../../../assets/img/bg16.png" alt="">
-      <img class="img" src="../../../assets/img/map.png" alt="">
+      <h1 class="title">{{$t("landing.plans_into_next_year")}}</h1>
+      <img class="img" src="@/assets/img/bg16.png" alt="">
+      <img class="img" src="@/assets/img/map.png" alt="">
       <div class="x-sixteen">
         <div class="d-flex flex-column justify-content-center align-items-center text-center">
           <div class="my-5">
             <h1>x16</h1>
             <img src="~@/assets/img/Vector.svg" alt="">
           </div>
-          <h3>Во столько раз мы должны вырасти в 2024 году,</h3>
+          <h3>{{$t("landing.how_many_times_we_need_to_improve")}}</h3>
           <p>увеличив стоимость компании до <span>$150 млн</span></p>
         </div>
       </div>
       <div class="container flex-wrap gap-15 d-flex justify-content-between pb-5 inner_cards">
         <div class="inner_card">
           <img src="~@/assets/img/iconn1.png" alt="">
-          <h2 class="">Новые рынки</h2>
-          <p class="">Турция, Саудовская Аравия, США и другие страны</p>
+          <h2 class="">{{$t("landing.new_markets")}}</h2>
+          <p class="">{{$t("landing.countries")}}</p>
         </div>
         <div class="inner_card">
           <img src="~@/assets/img/iconn2.png" alt="">
-          <h2 class="">Новые продукты</h2>
-          <p class="">TrustMe AI, Big Data и Data Science</p>
+          <h2 class="">{{$t("landing.new_products")}}</h2>
+          <p class="">{{$t("landing.description_of_products")}}</p>
         </div>
         <div class="inner_card">
           <img src="~@/assets/img/iconn3.png" alt="">
-          <h2 class="">Высокий спрос</h2>
-          <p class="">несмотря на конкуренцию (DocuSign, AdobeSign)</p>
+          <h2 class="">{{$t("landing.high_demand")}}</h2>
+          <p class="">{{$t("landing.despite_the_competition")}}</p>
         </div>
         <div class="inner_card">
           <img src="~@/assets/img/iconn4.png" alt="">
-          <h2>Задача</h2>
-          <p>Масштабироваться по миру, став лидером по подписанию договоров</p>
+          <h2>{{$t("landing.task")}}</h2>
+          <p>{{$t("landing.scale_around_the_world")}}</p>
         </div>
       </div>
-
     </div>
   </section>
 </template>

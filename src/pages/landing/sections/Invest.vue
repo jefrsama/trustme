@@ -2,7 +2,7 @@
   <section class="wrapper-block-two d-flex justify-content-center">
     <div class="container m-auto">
       <div class="inner_card">
-        <h2 class="text-center text-white mt-3">Инвестируйте в стартап с большим будущим!</h2>
+          <h2 class="text-center text-white mt-3">{{$t("landing.invest_into_with_big_future")}}</h2>
         <div class="d-flex justify-content-between mt-4 gap-45">
           <img src="~@/assets/img/IMG.png" alt="" class="">
           <div>

@@ -3,30 +3,30 @@
     <div class="container m-auto">
       <div class="inner-content">
         <div class="w-100 d-flex justify-content-between align-items-center head">
-          <h1 class=" text-white py-2">Экосистема доверия <span>TrustMe</span></h1>
-          <button>Узнать больше о TrustMe</button>
+          <h1 class=" text-white py-2">{{$t("landing.eco_system_trust")}} <span>TrustMe</span></h1>
+          <button>{{$t("landing.eco_system_trust")}}</button>
         </div>
         <div class="w-100 flex-wrap gap-20 d-flex justify-content-between align-items-center">
           <div class="inner_card">
             <img src="~@/assets/img/icon1.svg" alt="">
-            <h3 class="pt-3">Миссия</h3>
-            <p class="pt-3">Сделать этот мир лучше при помощи технологий и инноваций</p>
+            <h3 class="pt-3">{{$t("landing.eco_system_trust")}}</h3>
+            <p class="pt-3">{{$t("landing.make_world_better_with_technologies")}}</p>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/icon2.svg" alt="">
-            <h3 class="pt-3">Цель</h3>
-            <p class="pt-3">Cтать первым единорогом из Центральной Азии</p>
+            <h3 class="pt-3">{{$t("landing.aim")}}</h3>
+            <p class="pt-3">{{$t("landing.become_the_first_in_central_asia")}}</p>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/icon3.svg" alt="">
-            <h3 class="pt-3">Технологии</h3>
-            <p class="pt-3">SmartContract, Blockchain, AI и другие технологии</p>
+            <h3 class="pt-3">{{$t("landing.technology")}}</h3>
+            <p class="pt-3">{{$t("landing.smart_contract_blockchain_ai")}}</p>
           </div>
           <div class="inner_long_card d-flex">
             <div style="width: 60%;">
               <img src="~@/assets/img/icon4.svg" alt="">
-              <h3 class="pt-3">Продукт</h3>
-              <p class="pt-3"><a href="#">TrustContract</a> - сервис электронного подписания договоров и создания SmartContracts на технологии Blockchain</p>
+              <h3 class="pt-3">{{$t("landing.product")}}</h3>
+              <p class="pt-3"><a href="#">TrustContract</a>{{$t("landing.service_online_sign_applications")}}</p>
             </div>
             <div class="img mx-4 py-2">
               <img src="~@/assets/img/group1.svg" alt="">
@@ -34,15 +34,15 @@
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/icon5.svg" alt="">
-            <h3 class="pt-3">Остались вопросы?</h3>
-            <p class="pt-3">Оставьте заявку и мы свяжемся с вами, чтобы рассказать о возможностях инвестирования</p>
-            <button class="text-center">Узнать больше</button>
+            <h3 class="pt-3">{{$t("landing.have_questions")}}</h3>
+            <p class="pt-3">{{$t("landing.leave_a_request")}}</p>
+            <button class="text-center">{{$t("landing.read_more")}}</button>
           </div>
         </div>
       </div>
 
       <div class="achievements w-100 py-5 mt-5">
-        <h1 class="py-5">Наши достижения</h1>
+        <h1 class="py-5">{{$t("landing.our_achievements")}}</h1>
         <div class="d-flex w-100 flex-wrap gap-20 justify-content-between align-items-center">
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach1.png" alt="">
@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="achievements_inner_card_three mt-4">
-          <h5><span>В ТОП-10 стартапов</span> Центральной Азии на Digital Bridge 2023</h5>
+          <h5><span>{{$t("landing.top_10_sturtups")}}</span> Центральной Азии на Digital Bridge 2023</h5>
           <div class="d-flex justify-content-between align-items-center pt-3">
             <img src="~@/assets/img/ach6png.png" alt="">
             <img src="~@/assets/img/ach7.png" alt="">
@@ -132,6 +132,7 @@ export default {
   }
 
   h1 {
+    font-family: Monrope, sans-serif;
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
@@ -139,10 +140,12 @@ export default {
     text-align: center;
 
     span {
+      font-family: Monrope, sans-serif;
       color: #159F9F;
     }
   }
   button {
+    font-family: Monrope, sans-serif;
     border-radius: 32px;
     width: 288px;
     height: 61px;
@@ -174,6 +177,8 @@ export default {
       letter-spacing: 0em;
       text-align: left;
       color: #fff;
+      font-family: Monrope, sans-serif;
+
     }
 
     p {
@@ -181,6 +186,8 @@ export default {
       font-weight: 400;
       text-align: left;
       color: #B5BDBE;
+      font-family: Monrope, sans-serif;
+
     }
 
     button {
@@ -192,6 +199,8 @@ export default {
       background: none;
       border: 1px solid #159F9F;
       color: #159F9F;
+      font-family: Monrope, sans-serif;
+
     }
   }
 
@@ -215,6 +224,8 @@ export default {
       letter-spacing: 0em;
       text-align: left;
       color: #fff;
+      font-family: Monrope, sans-serif;
+
     }
 
     p {
@@ -222,11 +233,14 @@ export default {
       font-weight: 400;
       text-align: left;
       color: #B5BDBE;
+      font-family: Monrope, sans-serif;
 
       a {
         color: #0EB6B6;
         text-transform: none;
         text-decoration: none;
+        font-family: Monrope, sans-serif;
+
       }
     }
 
@@ -265,6 +279,8 @@ export default {
       letter-spacing: 0px;
       text-align: center;
       color: #fff;
+      font-family: Monrope, sans-serif;
+
     }
   }
 
@@ -287,9 +303,13 @@ export default {
       line-height: 27px;
       letter-spacing: 0em;
       text-align: left;
+      font-family: Monrope, sans-serif;
+
 
       span {
         color: #0EB6B6;
+        font-family: Monrope, sans-serif;
+
       }
     }
 
@@ -300,6 +320,8 @@ export default {
       letter-spacing: 0em;
       text-align: left;
       color: #B5BDBE;
+      font-family: Monrope, sans-serif;
+
     }
   }
 
@@ -322,9 +344,12 @@ export default {
       line-height: 33px;
       letter-spacing: 0em;
       text-align: left;
+      font-family: Monrope, sans-serif;
 
       span {
         color: #0EB6B6;
+        font-family: Monrope, sans-serif;
+
       }
     }
   }
@@ -348,9 +373,12 @@ export default {
       letter-spacing: 0em;
       text-align: left;
       color: #fff;
+      font-family: Monrope, sans-serif;
 
       span {
         color: #0EB6B6;
+        font-family: Monrope, sans-serif;
+
       }
     }
   }

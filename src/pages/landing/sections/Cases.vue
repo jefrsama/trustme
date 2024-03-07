@@ -1,10 +1,9 @@
 <template>
   <section class="wrapper-block-five">
     <div class="container m-auto">
-
       <div class="inner_long_card text-center">
-        <h1>Кейсы TrustContract</h1>
-        <p class="pt-3">Отзывы наших клиентов</p>
+        <h1>{{$t("landing.cases_trust_contract")}}</h1>
+        <p class="pt-3">{{$t("landing.review_our_clients")}}</p>
       </div>
       <img class="bg" src="~@/assets/img/BG-cases.png" alt="">
       <swiper
@@ -45,9 +44,8 @@
           </div>
         </swiper-slide>
       </swiper>
-
       <div class="clients text-white text-center">
-        <h1 class="">Наши клиенты</h1>
+        <h1 class="">{{$t("landing.our_clients")}}</h1>
         <div class="scroll">
           <div v-for="(logo, index) in logos" :key="index" class="scroll-slide">
             <img v-for="(face, logoIndex) in logo" :key="logoIndex" :src="require(`@/assets/img/company${logoIndex + 1}.png`)" :alt="'Face ' + faceIndex">
@@ -61,35 +59,35 @@
       </div>
 
       <div class="smi text-white text-center mt-5">
-        <h1 class="">О нас говорят в СМИ</h1>
+        <h1 class="">О нас говорят в СМИ{{$t("landing.smi_talks_about_us")}}</h1>
         <div class="d-flex gap-15 flex-wrap justify-content-between align-items-center mt-5">
           <div class="inner_card">
             <img src="~@/assets/img/smi1.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/smi2.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/smi3.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/smi4.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
           <div class="inner_card">
             <img src="~@/assets/img/smi5.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
           <div class="inner_long_card_two">
             <img src="~@/assets/img/smi6.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
           <div class="inner_long_card_two">
             <img src="~@/assets/img/smi7.png" alt="">
-            <button>Прочитать</button>
+            <button>{{$t("landing.read")}}</button>
           </div>
         </div>
       </div>
@@ -182,11 +180,6 @@ export default {
     transition-property: transform;
     box-sizing: content-box;
   }
-  .swiper-android .swiper-slide,
-  .swiper-ios .swiper-slide,
-  .swiper-wrapper {
-    transform: translate3d(0px, 0, 0);
-  }
   .swiper-horizontal {
     touch-action: pan-y;
   }
@@ -201,28 +194,7 @@ export default {
     transition-property: transform;
     display: block;
   }
-  .swiper-slide-invisible-blank {
-    visibility: hidden;
-  }
-  .swiper-backface-hidden .swiper-slide {
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  /* 3D Effects */
-  .swiper-3d.swiper-css-mode .swiper-wrapper {
-    perspective: 1200px;
-  }
-  .swiper-3d .swiper-wrapper {
-    transform-style: preserve-3d;
-  }
-  .swiper-3d {
-    perspective: 1200px;
-  }
-  .swiper-3d .swiper-slide,
-  .swiper-3d .swiper-cube-shadow {
-    transform-style: preserve-3d;
-  }
+
   /* CSS Mode */
 
   .swiper-lazy-preloader-white {
@@ -243,26 +215,77 @@ export default {
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 50%;
-    width: 35px !important;
-    height: 35px !important;
-    z-index: 1;
+    border-radius: 50px;
+    background-color: #2c3e50;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
-    background-color: #717174;
-    border-radius: 30px;
-    color: #FDFDFD;
+    align-items: center;
+    justify-content: center;
   }
+
+  .swiper-button-prev::before,
+  .swiper-button-next::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #FDFDFD;
+    border-left: 2px solid #FDFDFD;
+    position: absolute;
+  }
+
+  .swiper-button-prev::before {
+    transform: rotate(-45deg);
+    left: 15px;
+  }
+
+  .swiper-button-next::before {
+    transform: rotate(135deg);
+    right: 15px;
+  }
+
   .swiper-button-prev,
-  .swiper-rtl .swiper-button-next {
-    top: 22%;
-    left: 14%;
+  .swiper-button-next::after {
+    font-size: 30px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
   }
+
+  .swiper-button-prev::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .swiper-button-next::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .swiper-rtl .swiper-button-next::before {
+    transform: rotate(-95deg);
+  }
+
+  .swiper-rtl .swiper-button-prev::before {
+    transform: rotate(45deg);
+  }
+
   .swiper-button-next,
   .swiper-rtl .swiper-button-prev {
     top: 22%;
-    right: 14%;
-    content: '';
+    left: 85%;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next{
+    top: 22%;
+    right: 85%;
   }
 
   .swiper {
@@ -277,14 +300,6 @@ export default {
     justify-content: center;
     align-items: center;
   }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .swiper {
     margin-left: auto;
     margin-right: auto;
@@ -330,7 +345,6 @@ export default {
   }
 
   /* Cases ends */
-
 
 /* logos start */
   @keyframes  slide {
