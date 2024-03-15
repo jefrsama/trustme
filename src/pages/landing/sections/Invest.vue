@@ -6,9 +6,8 @@
         <div class="d-flex justify-content-between mt-4 gap-45">
           <img src="~@/assets/img/IMG.png" alt="" class="">
           <div>
-            <p class="text-white">“Начав свой путь в 2020 году как платформа для отзывов и рекомендаций, <a href="#">TrustMe</a> на сегодняшний день стала популярной площадкой, используемой как юридическими, так и физическими лицами в Казахстане. В декабре 2021 года мы запустили онлайн-сервис подписания договоров —
-              <a href="#">TrustContract</a>”.</p>
-            <p class="text-white mt-2">Чингиз Даулетбаев <span>— основатель и CEO Экосистемы Доверия TrustMe.</span></p>
+            <p class="text-white" v-html="$t('landing.invest_into_description')"></p>
+            <p class="text-white mt-2" v-html="$t('landing.founder_and_ceo')"></p>
           </div>
         </div>
       </div>

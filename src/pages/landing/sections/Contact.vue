@@ -5,48 +5,19 @@
         <div class="inner_long_card">
           <div>
             <h1>{{$t("landing.get_up_to_invest")}}</h1>
-            <p>{{$t("landing.ceo_personally_contact_you")}}</p>
+            <p class="mt-4">{{$t("landing.ceo_personally_contact_you")}}</p>
           </div>
           <button>{{$t("landing.submit_your_application")}}</button>
         </div>
       </div>
-
       <div class="inner_title mt-5">
         <h3 class="pt-5">{{$t("landing.contact_info_of_head")}}</h3>
         <p class="pt-3">{{$t("landing.take_an_opportunity_to_share")}}</p>
       </div>
       <div class="inner_content mt-5">
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon1.svg" alt="">
-          <p>+7 (777) 518-22-00</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon2.svg" alt="">
-          <p>daukaz</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon3.svg" alt="">
-          <p>trustme.kz</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon4.svg" alt="">
-          <p>ceo.trustme@gmail.com</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon5.svg" alt="">
-          <p>@qazaqeli</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon5.svg" alt="">
-          <p>@trustme.kz</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon6.svg" alt="">
-          <p>dauletbayev</p>
-        </div>
-        <div class="inner_card">
-          <img src="~@/assets/img/contact-icon7.svg" alt="">
-          <p>dauletbayev</p>
+        <div class="inner_card" v-for="(card, index) in cardsWithResolvedImages" :key="`investent-card-${index}`">
+          <img :src=card.imgResolved alt="">
+          <p v-html="card.header"></p>
         </div>
       </div>
     </div>
@@ -56,6 +27,52 @@
 <script>
 export default {
   name: "ContactSection",
+  data () {
+    return {
+      cards: [
+        {
+          img: "contact-icon1.svg",
+          header: this.$t('landing.contact_headers.1')
+        },
+        {
+          img: "contact-icon2.svg",
+          header: this.$t('landing.contact_headers.2')
+        },
+        {
+          img: "contact-icon3.svg",
+          header: this.$t('landing.contact_headers.3')
+        },
+        {
+          img: "contact-icon4.svg",
+          header: this.$t('landing.contact_headers.4')
+        },
+        {
+          img: "contact-icon5.svg",
+          header: this.$t('landing.contact_headers.5')
+        },
+        {
+          img: "contact-icon5.svg",
+          header: this.$t('landing.contact_headers.6')
+        },
+        {
+          img: "contact-icon6.svg",
+          header: this.$t('landing.contact_headers.7')
+        },
+        {
+          img: "contact-icon7.svg",
+          header: this.$t('landing.contact_headers.8')
+        }
+      ]
+    }
+  },
+  computed: {
+    cardsWithResolvedImages() {
+      return this.cards.map(card => ({
+        ...card,
+        imgResolved: require(`@/assets/img/${card.img}`),
+      }));
+    },
+  }
 }
 </script>
 
@@ -87,7 +104,7 @@ export default {
     left: 116px;
     padding: 48px;
     border-radius: 12px;
-    border: 1px solid #17B2B233;
+    border: 1px solid #159F9F;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
     -webkit-backdrop-filter: blur(20px);

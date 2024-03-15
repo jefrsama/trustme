@@ -9,12 +9,12 @@
       <div class="d-flex justify-content-center align-items-center gap-70 mt-5">
         <div class="inner_card">
           <h3>{{$t("landing.three_business_angels")}}</h3>
-          <h1>$100.000</h1>
+          <h1 v-html="$t('landing.$100')"></h1>
           <p>{{$t("landing.estimated_at_20_millions")}}</p>
         </div>
         <div class="inner_card">
           <h3>{{$t("landing.venture_fund")}}</h3>
-          <h1>$400.000</h1>
+          <h1 v-html="$t('landing.$400')"></h1>
           <p>{{$t("landing.estimated_at_15_millions")}}</p>
         </div>
       </div>

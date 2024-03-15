@@ -3,7 +3,7 @@
     <div class="container m-auto">
       <div class="d-flex justify-content-between align-items-top first-container">
         <div class="footer_logo_container">
-          <img src="@/assets/img/footer-logo.svg" width="100px" alt="">
+          <img src="~@/assets/img/footer-logo.svg" width="100px" height="28px" alt="">
           <p class="pt-3">{{$t("landing.make_the_world_better")}}</p>
         </div>
         <div class="footer_second_container">
@@ -38,7 +38,7 @@
     </div>
     <div class="container m-auto">
       <div class="d-flex justify-content-between align-items-center last-container">
-        <p class="pt-3">© 2023 TrustMe Limited. Все права защищены.</p>
+        <p class="pt-3">{{$t("landing.all_supported")}}</p>
         <div class="d-flex gap-15 align-items-center">
           <img src="~@/assets/img/footer-facebook.svg" alt="">
           <img src="~@/assets/img/footer-telegram.svg" alt="">

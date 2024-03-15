@@ -13,8 +13,9 @@
         </ul>
       <div>
         <select id="languageSelect" v-model="selectedCityValue" @change="changeLanguage()">
-          <option value="ru">ru</option>
-          <option value="kz">kz</option>
+          <option value="ru">Русский</option>
+          <option value="kz">Kazakh</option>
+          <option value="kz">English</option>
         </select>
       </div>
     </div>
@@ -34,8 +35,11 @@ export default {
   data() {
     return {
       selectedCityValue: locale,
-      selectedCity: [{ label: "ru", value: "ru" },
-      { label: "kz", value: "kz" }]
+      selectedCity: [
+          { label: "ru", value: "ru" },
+          { label: "kz", value: "kz" },
+          { label: "en-us", value: "en-us" }
+      ]
     }
   },
   methods: {

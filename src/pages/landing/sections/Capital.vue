@@ -10,7 +10,7 @@
         </div>
         <div class="inner_long_card">
           <img src="~@/assets/img/capital-icon2.png" class="mt-4" alt="">
-          <h1>с <span>$2,5</span> млн до <span>$15 млн</span></h1>
+          <h1 v-html="$t('landing.from_2_to_15')"></h1>
           <p>{{$t("landing.grow_up_from_21_to_23")}}</p>
         </div>
       </div>
@@ -18,50 +18,17 @@
 
       <h1 class="mt-5">{{$t("landing.we_are_in_believe_to_20_investors")}}</h1>
       <div class="d-flex flex-wrap gap-15 justify-content-between align-items-center my-5">
-        <div class="inner_card">
+        <div class="inner_card" v-for="(card, index) in cardsWithResolvedImages" :key="`investent-card-${index}`">
           <div>
-            <img class="gap-25" src="~@/assets/img/face1.png" alt="">
-            <h1 class="py-2">Марлен Шохитбаев</h1>
-            <span>Berlin, Germany</span>
-            <h5 class="py-2">Scope Ratings, Director</h5>
-            <p>IT, Telecom, Real estate, Oil & Gas</p>
+            <img class="gap-25" :src="card.imgResolved" alt="">
+            <h1 class="" v-html="card.name"></h1>
+            <span v-html="card.country"></span>
+            <h5 class="py-1" v-html="card.major"></h5>
+            <p v-html="card.description"></p>
           </div>
-          <div class="">Freie Universitat Berlin, MBA</div>
-        </div>
-        <div class="inner_card">
-          <div>
-            <img class="gap-25" src="~@/assets/img/face2.png" alt="">
-            <h1 class="py-2">Эльдар Толеш</h1>
-            <span>Dubai, UAE</span>
-            <h5 class="py-2">Real Estate Investor & Angel Investor</h5>
-            <p>Associate Director of Sales Unique Property Broker</p>
-          </div>
-          <div class="">Freie Universitat Berlin, MBA</div>
-        </div>
-
-        <div class="inner_card">
-          <div>
-            <img class="gap-25" src="~@/assets/img/face3.png" alt="">
-            <h1 class="py-2">Ерик Шыныбеков</h1>
-            <span>Berlin, Germany</span>
-            <h5 class="py-2">Stock market and private equity investor</h5>
-            <p>Founder of Investment Club</p>
-          </div>
-          <div class="">SBS Swiss Business School, MBA</div>
-        </div>
-
-        <div class="inner_card">
-          <div>
-            <img class="gap-25" src="~@/assets/img/face4.png" alt="">
-            <h1 class="py-2">Габит Кемелов</h1>
-            <span>Zurich, Switzerland</span>
-            <h5 class="py-2">Blockchain specialist</h5>
-            <p>Senior Business Analyst in Six Digital Exchange</p>
-          </div>
-          <div class="">University of Zurich</div>
+          <div class="" v-html="card.place"></div>
         </div>
       </div>
-
     </div>
 
     <div class="clients text-white text-center">
@@ -99,13 +66,55 @@ export default {
           "~@/assets/img/face11.png",
           "~@/assets/img/face12.png"
         ]
+      ],
+      cards: [
+        {
+          img: "face1.png",
+          name: this.$t('landing.investors_card_name.1'),
+          country: this.$t('landing.investors_card_country.1'),
+          major: this.$t('landing.investors_card_major.1'),
+          description: this.$t('landing.investors_card_description.1'),
+          place: this.$t('landing.investors_card_place.1'),
+        },
+        {
+          img: "face2.png",
+          name: this.$t('landing.investors_card_name.2'),
+          country: this.$t('landing.investors_card_country.2'),
+          major: this.$t('landing.investors_card_major.2'),
+          description: this.$t('landing.investors_card_description.2'),
+          place: this.$t('landing.investors_card_place.2'),
+        },
+        {
+          img: "face3.png",
+          name: this.$t('landing.investors_card_name.3'),
+          country: this.$t('landing.investors_card_country.3'),
+          major: this.$t('landing.investors_card_major.3'),
+          description: this.$t('landing.investors_card_description.3'),
+          place: this.$t('landing.investors_card_place.3'),
+        },
+        {
+          img: "face4.png",
+          name: this.$t('landing.investors_card_name.4'),
+          country: this.$t('landing.investors_card_country.4'),
+          major: this.$t('landing.investors_card_major.4'),
+          description: this.$t('landing.investors_card_description.4'),
+          place: this.$t('landing.investors_card_place.4'),
+        }
       ]
     };
+  },
+  computed: {
+    cardsWithResolvedImages() {
+      return this.cards.map(card => ({
+        ...card,
+        imgResolved: require(`@/assets/img/${card.img}`),
+      }));
+    },
   }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 .wrapper-block-six {
   padding-top: 150px;
@@ -338,10 +347,9 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1200px) {
 
   .wrapper-block-six {
-
     .inner_card {
       width: 23%;
       }
@@ -358,6 +366,17 @@ export default {
 
   .wrapper-block-six {
     height: 1700px;
+
+    .inner_long_card {
+      height: 270px;
+      h1 {
+        font-size: 26px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
 
     .inner_card {
       position: relative;
@@ -392,6 +411,12 @@ export default {
       text-align: center;
       width: 100%;
       height: 255px;
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 20px;
+      }
     }
     .inner_card {
       position: relative;
@@ -454,6 +479,19 @@ export default {
         letter-spacing: 0em;
         text-align: center;
         color: rgba(231, 231, 231, 1);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper-block-six {
+
+    .inner_long_card{
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 18px;
       }
     }
   }

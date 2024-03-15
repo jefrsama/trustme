@@ -47,19 +47,10 @@
       </div>
 
       <div class="w-100 d-flex flex-wrap justify-content-between align-items-center">
-        <div class="inner_long_card text-center">
-          <h1>1030</h1>
-          <p>{{$t("landing.quantity_of_clients")}}</p>
-        </div>
-        <div class="inner_long_card text-center">
-          <h1>180 700</h1>
-          <p>{{$t("landing.signed_agreements")}}</p>
-        </div>
-        <div class="inner_long_card text-center">
-          <div>
-            <h1>147 млн ₸</h1>
-            <p>{{$t("landing.earned_all_the_time")}}</p>
-          </div>
+        <div class="inner_long_card text-center"
+             v-for="(card, index) in longCards" :key="index">
+          <h1 v-html="card.header"></h1>
+          <p v-html="card.label"></p>
         </div>
       </div>
     </div>
@@ -69,6 +60,24 @@
 <script>
 export default {
   name: "TrustContractSection",
+  data() {
+    return {
+      longCards: [
+        {
+          header: "1030",
+          label: this.$t('landing.quantity_of_clients')
+        },
+        {
+          header: "180 700",
+          label: this.$t('landing.signed_agreements')
+        },
+        {
+          header: "147 млн ₸",
+          label: this.$t('landing.earned_all_the_time')
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -161,7 +170,7 @@ export default {
   .inner_card {
     padding: 30px 30px;
     width: 48%;
-    height: 306px;
+    height: 356px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);

@@ -7,11 +7,11 @@
       <div class="x-sixteen">
         <div class="d-flex flex-column justify-content-center align-items-center text-center">
           <div class="my-5">
-            <h1>x16</h1>
+            <h1>{{$t("landing.x16")}}</h1>
             <img src="~@/assets/img/Vector.svg" alt="">
           </div>
           <h3>{{$t("landing.how_many_times_we_need_to_improve")}}</h3>
-          <p>увеличив стоимость компании до <span>$150 млн</span></p>
+          <p v-html="$t('landing.by_upgrade_cost_of_company')"></p>
         </div>
       </div>
       <div class="container flex-wrap gap-15 d-flex justify-content-between pb-5 inner_cards">
@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .wrapper-block-seven {
   width: 100%;
   height: 1200px;

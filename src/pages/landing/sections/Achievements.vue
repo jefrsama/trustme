@@ -2,14 +2,14 @@
   <section class="wrapper-block-three">
     <div class="container m-auto">
       <div class="inner-content">
-        <div class="w-100 d-flex justify-content-between align-items-center head">
-          <h1 class=" text-white py-2">{{$t("landing.eco_system_trust")}} <span>TrustMe</span></h1>
-          <button>{{$t("landing.eco_system_trust")}}</button>
+        <div class="w-100 d-flex justify-content-between align-items-center head py-4">
+          <h1 class="py-2" v-html="$t('landing.eco_system_trust')"></h1>
+          <button>{{$t("landing.get_more_about_trustme")}}</button>
         </div>
         <div class="w-100 flex-wrap gap-20 d-flex justify-content-between align-items-center">
           <div class="inner_card">
             <img src="~@/assets/img/icon1.svg" alt="">
-            <h3 class="pt-3">{{$t("landing.eco_system_trust")}}</h3>
+            <h3 class="pt-3">{{$t("landing.mission")}}</h3>
             <p class="pt-3">{{$t("landing.make_world_better_with_technologies")}}</p>
           </div>
           <div class="inner_card">
@@ -26,7 +26,7 @@
             <div style="width: 60%;">
               <img src="~@/assets/img/icon4.svg" alt="">
               <h3 class="pt-3">{{$t("landing.product")}}</h3>
-              <p class="pt-3"><a href="#">TrustContract</a>{{$t("landing.service_online_sign_applications")}}</p>
+              <p class="pt-3" v-html="$t('landing.service_online_sign_applications')"></p>
             </div>
             <div class="img mx-4 py-2">
               <img src="~@/assets/img/group1.svg" alt="">
@@ -46,12 +46,12 @@
         <div class="d-flex w-100 flex-wrap gap-20 justify-content-between align-items-center">
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach1.png" alt="">
-            <h5 class="py-3">Вошли <span>в TОП-10 стартапов</span> в Кремниевой долине, США</h5>
-            <p>По завершению Hero Training, TrustMe была признана наиболее инновационным и инвестиционно привлекательным решением, войдя в десятку лучших среди более чем 100 стартапов из 35 стран мира.</p>
+            <h5 class="py-3" v-html="$t('landing.entered_into_top_10_sturtups')"></h5>
+            <p>{{$t('landing.after_finish_hero_training')}}</p>
           </div>
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach2.png" alt="">
-            <h5 class="py-3">Вошли <span>в ТОП-3 лучших стартапа</span> по версии MasterCard а Astana Finance Days</h5>
+            <h5 class="py-3" v-html="$t('landing.entered_into_top_3_best_startups')"></h5>
             <div class="d-flex gap-20">
               <img width="100px" src="~@/assets/img/mastercard.png" alt="">
               <img width="160px" src="~@/assets/img/astanafinancedays.png" alt="">
@@ -59,7 +59,7 @@
           </div>
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach3.png" alt="">
-            <h5 class="py-3"><span>Среди 6 лучших стартапов</span> в программе Азиатского банка развития</h5>
+            <h5 class="py-3" v-html="$t('landing.top_6_startups_in_central_asia_bank_program')"></h5>
             <div class="d-flex gap-20">
               <img width="64px" src="~@/assets/img/kazakhstan.png" alt="">
               <img width="64px" src="~@/assets/img/azerbaijan.png" alt="">
@@ -67,7 +67,7 @@
             </div>
           </div>
           <div class="achievements_inner_card">
-            <h5 class="py-3">Прошли <span>в 15 лучших</span> из Центральной Азии в 2023 году</h5>
+            <h5 class="py-3" v-html="$t('landing.entered_into_the_top_15_startups')"></h5>
             <div>
               <img class="pt-4" src="~@/assets/img/silkway.png" alt="">
               <img class="py-4" src="~@/assets/img/google.png" alt="">
@@ -76,15 +76,15 @@
           </div>
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach4.png" alt="">
-            <h5 class="py-3"><span>Лучший blockchain проект</span> Казахстана</h5>
+            <h5 class="py-3" v-html="$t('landing.best_blockchain_project_in_kz')"></h5>
           </div>
           <div class="achievements_inner_card">
             <img src="~@/assets/img/ach5.png" alt="">
-            <h5 class="py-3">Открыли зарубежный офис в Узбекистане</h5>
+            <h5 class="py-3">{{$t('landing.abroad_office_in_uzbekistan')}}</h5>
           </div>
         </div>
         <div class="achievements_inner_card_three mt-4">
-          <h5><span>{{$t("landing.top_10_sturtups")}}</span> Центральной Азии на Digital Bridge 2023</h5>
+          <h5 v-html="$t('landing.top_10_sturtups_in_digital_bridge')"></h5>
           <div class="d-flex justify-content-between align-items-center pt-3">
             <img src="~@/assets/img/ach6png.png" alt="">
             <img src="~@/assets/img/ach7.png" alt="">
@@ -97,12 +97,19 @@
 </template>
 
 <script>
+import landing from "../landing.vue";
+
 export default {
   name: "AchievementPage",
+  computed: {
+    landing() {
+      return landing
+    }
+  },
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .wrapper-block-three {
   background-color: #020F22;
   width: 100%;
@@ -136,9 +143,8 @@ export default {
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
-    letter-spacing: 0px;
     text-align: center;
-
+    color: #fff;
     span {
       font-family: Monrope, sans-serif;
       color: #159F9F;
@@ -161,7 +167,7 @@ export default {
     text-align: start;
     padding: 40px 40px;
     width: 32%;
-    height: 354px;
+    height: 384px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
@@ -208,7 +214,7 @@ export default {
     text-align: start;
     padding: 40px 40px;
     width: 66%;
-    height: 354px;
+    height: 384px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
@@ -321,9 +327,10 @@ export default {
       text-align: left;
       color: #B5BDBE;
       font-family: Monrope, sans-serif;
-
     }
+
   }
+
 
   .achievements_inner_card:nth-child(n+4) {
     padding: 40px 40px;
@@ -385,7 +392,7 @@ export default {
 
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   .wrapper-block-three {
     background-color: #020F22;
     width: 100%;
@@ -502,7 +509,7 @@ export default {
     .achievements_inner_card_three{
       padding: 20px;
       width: 100%;
-      height: 240px;
+      height: 280px;
       border: 1px solid #17B2B233;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.05);
@@ -510,11 +517,11 @@ export default {
       -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
-      
+
       img {
         width: 32%;
       }
-      
+
       h5 {
         font-size: 24px;
         font-weight: 600;
@@ -636,6 +643,11 @@ export default {
           width: 50%;
           height: 40%;
         }
+      }
+    }
+    .achievements_inner_card_three{
+      img {
+        width: 32%;
       }
     }
   }

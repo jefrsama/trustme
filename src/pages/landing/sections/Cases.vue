@@ -7,40 +7,26 @@
       </div>
       <img class="bg" src="~@/assets/img/BG-cases.png" alt="">
       <swiper
-          :slidesPerView="3"
+          :slidesPerView="1"
           :spaceBetween="30"
           :loop="true"
           :modules="modules"
           class="mySwiper"
-          navigation
+          :breakpoints="{
+            768: {
+              slidesPerView: 2,
+            },
+            992: {
+              slidesPerView: 3,
+              navigation: true
+            }
+          }"
       >
-        <swiper-slide>
+        <swiper-slide v-for="(card, index) in swiperCards" :key="index">
           <div class="card">
-            <h2 class="pt-4">Bramf</h2>
-            <h5 class="pt-1">Мебельный цех</h5>
-            <p class="pt-4">TrustContract упрощает заключение договоров, сокращая время на сделки и способствуя увеличению продаж. Например, мебельный цех Bramf с TrustContract увеличил доходы на 15%</p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="card">
-            <h2 class="pt-4">Программа «Болашак»</h2>
-            <h5 class="pt-1">Онлайн прием заявок и сопутствующих документов от стипендиатов</h5>
-            <p class="pt-4">С января 2024 г. стипендианты могут заключать договора на стажировки онлайн, без посещения офиса для предоставления документов. Процесс упрощен за счет использования ЭЦП, что исключает необходимость в доверенности
-              от гарантов.</p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="card">
-            <h2 class="pt-4">Metry.kz</h2>
-            <h5 class="pt-1">Агентство недвижимости</h5>
-            <p class="pt-4">TrustContract упрощает заключение договоров удаленно, что открывает новые рынки для риелторов. Например, Metry.kz теперь может успешно работать с клиентами из разных городов Казахстана</p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="card">
-            <h2 class="pt-4">Bramf</h2>
-            <h5 class="pt-1">Мебельный цех</h5>
-            <p class="pt-4">TrustContract упрощает заключение договоров, сокращая время на сделки и способствуя увеличению продаж. Например, мебельный цех Bramf с TrustContract увеличил доходы на 15%</p>
+            <h2 class="pt-4" v-html="card.header"></h2>
+            <h5 class="pt-1" v-html="card.review"></h5>
+            <p class="pt-4" v-html="card.description"></p>
           </div>
         </swiper-slide>
       </swiper>
@@ -59,7 +45,7 @@
       </div>
 
       <div class="smi text-white text-center mt-5">
-        <h1 class="">О нас говорят в СМИ{{$t("landing.smi_talks_about_us")}}</h1>
+        <h1>{{$t("landing.smi_talks_about_us")}}</h1>
         <div class="d-flex gap-15 flex-wrap justify-content-between align-items-center mt-5">
           <div class="inner_card">
             <img src="~@/assets/img/smi1.png" alt="">
@@ -132,6 +118,53 @@ export default {
           "~@/assets/img/company8.png",
           "~@/assets/img/company9.png",
         ]
+      ],
+      swiperCards: [
+        {
+          header: this.$t('landing.client_cases_header.1'),
+          review: this.$t('landing.client_cases_review.1'),
+          description: this.$t('landing.client_cases_description.1'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.2'),
+          review: this.$t('landing.client_cases_review.2'),
+          description: this.$t('landing.client_cases_description.2'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.3'),
+          review: this.$t('landing.client_cases_review.3'),
+          description: this.$t('landing.client_cases_description.3'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.4'),
+          review: this.$t('landing.client_cases_review.4'),
+          description: this.$t('landing.client_cases_description.4'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.5'),
+          review: this.$t('landing.client_cases_review.5'),
+          description: this.$t('landing.client_cases_description.5'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.6'),
+          review: this.$t('landing.client_cases_review.6'),
+          description: this.$t('landing.client_cases_description.6'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.7'),
+          review: this.$t('landing.client_cases_review.7'),
+          description: this.$t('landing.client_cases_description.7'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.8'),
+          review: this.$t('landing.client_cases_review.8'),
+          description: this.$t('landing.client_cases_description.8'),
+        },
+        {
+          header: this.$t('landing.client_cases_header.9'),
+          review: this.$t('landing.client_cases_review.9'),
+          description: this.$t('landing.client_cases_description.9'),
+        },
       ]
     };
   }
@@ -140,10 +173,10 @@ export default {
 
 <style lang="scss">
 .wrapper-block-five {
-  padding-top: 40px;
+  padding-top: 140px;
   width: 100%;
   position: relative;
-  height: 2000px;
+  height: 2100px;
   background-color: #020F22;
 
   &::before {
@@ -407,7 +440,7 @@ export default {
     opacity: 0.3;
     position: absolute;
     left: 50%;
-    top: -2%;
+    top: 8%;
     transform: translate(-50%);
   }
 
@@ -446,11 +479,13 @@ export default {
     width: 100%;
     padding: 40px 0;
   }
+
   .slide-content{
     overflow: hidden;
     border-radius: 25px;
   }
-  .card{
+
+  .card {
     width: 389px;
     height: 538px;
     border-radius: 12px;
@@ -656,7 +691,7 @@ export default {
 @media only screen and (max-width: 992px) {
 
   .wrapper-block-five {
-    height: 1950px;
+    height: 1980px;
     .smi {
       button {
         font-size: 13px;
@@ -683,7 +718,31 @@ export default {
 }
 @media only screen and (max-width: 768px) {
   .wrapper-block-five {
-    height: 2350px;
+    height: 2400px;
+
+    .card {
+      padding: 20px;
+      width: 100%;
+      height: 400px;
+    }
+
+    .inner_long_card {
+      h1 {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0px;
+        color: #fff;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        color: #B5BDBE;
+      }
+    }
+
     .bg {
       width: 90%;
     }

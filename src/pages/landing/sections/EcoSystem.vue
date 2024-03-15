@@ -6,7 +6,7 @@
       </div>
       <div class="mt-5">
         <h1 class="text-white">{{$t("landing.eco_system")}}</h1>
-        <p class="mt-3">Инвестируйте <span>в самый быстрорастущий</span> стартап Центральной Азии</p>
+        <p class="mt-3" v-html="$t('landing.invest_into_the_fastest_grow_up_startup')"></p>
         <button class="mt-2">{{$t("landing.be_an_investor")}}</button>
       </div>
     </div>
@@ -27,7 +27,7 @@ export default {
   position: relative;
   width: 100%;
   height: 972px;
-  background-image: url("../../../assets/img/BG.png");
+  background-image: url("@/assets/img/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #020F22;
@@ -104,7 +104,7 @@ export default {
     position: relative;
     width: 100%;
     height: 902px;
-    background-image: url("../../../assets/img/BG.png");
+    background-image: url("@/assets/img/BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #020F22;
@@ -157,7 +157,7 @@ export default {
     position: relative;
     width: 100%;
     height: 840px;
-    background-image: url("../../../assets/img/BG.png");
+    background-image: url("@/assets/img/BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #020F22;
@@ -199,7 +199,7 @@ export default {
     position: relative;
     width: 100%;
     height: 700px;
-    background-image: url("../../../assets/img/BG.png");
+    background-image: url("@/assets/img/BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #020F22;
