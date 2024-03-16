@@ -13,9 +13,9 @@
         </ul>
       <div>
         <select id="languageSelect" v-model="selectedCityValue" @change="changeLanguage()">
-          <option value="ru">Русский</option>
-          <option value="kz">Kazakh</option>
-          <option value="kz">English</option>
+          <option value="ru">RU</option>
+          <option value="kz">KZ</option>
+          <option value="en-us">EN</option>
         </select>
       </div>
     </div>
@@ -52,7 +52,7 @@ export default {
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 header {
   font-family: Monrope, sans-serif;
   margin: 0;
@@ -62,6 +62,15 @@ header {
   align-items: center;
   background-color: #020F22;
   height: 61px;
+
+  select {
+    background: none;
+    color: white;
+    border: none;
+  }
+  select:focus {
+    background-color: #020F22;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -70,7 +79,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   li {
     font-size: 8px;
     visibility: hidden;

@@ -55,6 +55,12 @@ export default {
     box-shadow:5em -15em 30em 15em rgba(120, 214, 214, 0.25);
   }
 
+  .logo {
+    img{
+      width: 100%;
+      height: 50px;
+    }
+  }
   .mockup {
     z-index: 2;
     position: absolute;

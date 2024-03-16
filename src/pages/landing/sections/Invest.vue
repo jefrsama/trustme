@@ -221,11 +221,6 @@ export default {
       padding: 22px;
       width: 100%;
       height: 693px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
 
       img {
         width: 100%;
@@ -261,6 +256,19 @@ export default {
           color: #B5BDBE;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .wrapper-block-two {
+    width: 100%;
+    height: 1003px ;
+
+    .inner_card {
+      padding: 22px;
+      width: 100%;
+      height: 830px;
     }
   }
 }

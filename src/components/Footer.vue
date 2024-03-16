@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .wrapper-footer {
   width: 100%;
   height: 450px;
@@ -84,6 +84,10 @@ export default {
   }
 
   .footer_logo_container {
+    img {
+      width: 100%;
+      height: 30px;
+    }
     width: 200px;
     height: 70px;
   }

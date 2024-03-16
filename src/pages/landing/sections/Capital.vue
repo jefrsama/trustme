@@ -496,4 +496,15 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .wrapper-block-six {
+    padding: 0;
+    h1 {
+      font-size: 28px;
+    }
+
+  }
+}
+
 </style>

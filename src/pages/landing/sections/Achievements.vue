@@ -69,7 +69,7 @@
           <div class="achievements_inner_card">
             <h5 class="py-3" v-html="$t('landing.entered_into_the_top_15_startups')"></h5>
             <div>
-              <img class="pt-4" src="~@/assets/img/silkway.png" alt="">
+              <img class="pt-2" src="~@/assets/img/silkway.png" alt="">
               <img class="py-4" src="~@/assets/img/google.png" alt="">
               <img src="~@/assets/img/astana-hub.png" alt="">
             </div>
@@ -167,7 +167,7 @@ export default {
     text-align: start;
     padding: 40px 40px;
     width: 32%;
-    height: 384px;
+    height: 414px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
@@ -184,7 +184,6 @@ export default {
       text-align: left;
       color: #fff;
       font-family: Monrope, sans-serif;
-
     }
 
     p {
@@ -214,7 +213,7 @@ export default {
     text-align: start;
     padding: 40px 40px;
     width: 66%;
-    height: 384px;
+    height: 414px;
     border: 1px solid #17B2B233;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
@@ -331,7 +330,6 @@ export default {
 
   }
 
-
   .achievements_inner_card:nth-child(n+4) {
     padding: 40px 40px;
     width: 410px;
@@ -396,36 +394,10 @@ export default {
   .wrapper-block-three {
     background-color: #020F22;
     width: 100%;
-    height: 2504px;
+    height: 2594px;
     position: relative;
 
-    .inner_card {
-      text-align: start;
-      padding: 20px;
-      width: 31.5%;
-      height: 354px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
-    }
-
     .inner_long_card {
-      text-align: start;
-      padding: 20px;
-      width: 66%;
-      height: 354px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
-
       h3 {
         font-size: 28px;
         font-weight: 600;
@@ -544,18 +516,13 @@ export default {
     width: 100%;
     height: 2504px;
     position: relative;
+
     .inner_card {
       text-align: start;
       padding: 20px;
       width: 31.5%;
-      height: 354px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      height: 374px;
+
 
       h3 {
         font-size: 24px;
@@ -574,17 +541,7 @@ export default {
       }
     }
     .inner_long_card {
-      text-align: start;
-      padding: 20px;
-      width: 66%;
-      height: 354px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      height: 374px;
 
       h3 {
         font-size: 28px;
@@ -607,27 +564,35 @@ export default {
       padding: 15px;
       width: 31.5%;
       height: 584px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+     img {
+        width: 100%;
+      }
+      div {
+        img {
+          width: 100%;
+          height: 50px;
+        }
+      }
+    }
+    .achievements_inner_card:nth-child(n + 3){
+      padding: 15px;
+      width: 31.5%;
+      height: 584px;
       img {
         width: 100%;
       }
       div {
         img {
-          width: 100px;
+          width: 60px;
           height: 50px;
         }
       }
     }
+
     .achievements_inner_card:nth-child(n + 4){
       padding: 15px;
       width: 31.5%;
-      height: 364px;
+      height: 384px;
       border: 1px solid #17B2B233;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.05);
@@ -635,10 +600,13 @@ export default {
       -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+
       img {
         width: 100%;
       }
       div {
+        display: flex;
+        flex-direction: column;
         img {
           width: 50%;
           height: 40%;
@@ -657,7 +625,7 @@ export default {
   .wrapper-block-three {
     background-color: #020F22;
     width: 100%;
-    height: 3054px;
+    height: 3104px;
     position: relative;
 
     .inner-content {
@@ -675,14 +643,7 @@ export default {
       text-align: start;
       padding: 20px;
       width: 31%;
-      height: 354px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
+      height: 384px;
 
       h3 {
         font-size: 24px;
@@ -691,7 +652,6 @@ export default {
         text-align: left;
         color: #fff;
       }
-
       p {
         font-size: 16px;
         font-weight: 400;
@@ -705,9 +665,6 @@ export default {
         padding: 0 32px 0 32px;
         border-radius: 32px;
         gap: 10px;
-        background: none;
-        border: 1px solid #159F9F;
-        color: #159F9F;
       }
     }
 
@@ -715,15 +672,8 @@ export default {
       text-align: start;
       padding: 20px;
       width: 66%;
-      height: 354px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
-      
+      height: 384px;
+
       div:first-child {
         width: 500px;
       }
@@ -775,9 +725,19 @@ export default {
     .achievements_inner_card:nth-child(4){
       width: 48%;
       height: 584px;
+
       div {
         img {
-          width: 50%;
+          width: 60%;
+          height: 40%;
+        }
+      }
+    }
+    .achievements_inner_card:nth-child(3){
+      width: 48%;
+      div {
+        img {
+          width: 20%;
           height: 40%;
         }
       }
@@ -786,13 +746,6 @@ export default {
       padding: 15px;
       width: 48%;
       height: 364px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
       img {
         width: 100%;
       }
@@ -820,19 +773,17 @@ export default {
         flex-direction: column;
       }
     }
+    .achievements_inner_card{
+      p {
+        font-size: 15px;
+      }
+    }
 
-  .inner_card {
+    .inner_card {
     text-align: start;
     padding: 20px;
     width: 100%;
     height: 240px;
-    border: 1px solid #17B2B233;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-image-source: linear-gradient(248.91deg, rgba(14, 182, 182, 0.2) 27.96%, rgba(14, 182, 182, 0) 88.78%);
 
     h3 {
       font-size: 24px;
@@ -880,6 +831,64 @@ export default {
       color: #B5BDBE;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .wrapper-block-three {
+    width: 100%;
+    height: 5650px;
+
+    .inner_long_card {
+      p {
+        font-size: 12px;
+        padding: 0;
+      }
+      div:first-child{
+        width: 70%;
+      }
+      div:last-child {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .achievements_inner_card_three {
+      padding: 30px;
+      width: 100%;
+      height: 220px;
+    }
+    .achievements_inner_card{
+      padding: 30px;
+      width: 100%;
+      height: 640px;
+    }
+
+    .achievements_inner_card:nth-child(3) {
+      padding: 30px;
+      width: 100%;
+      height: 600px;
+
+      div {
+        img {
+          width: 10%;
+        }
+      }
+    }
+    .achievements_inner_card:nth-child(n + 4) {
+      padding: 30px;
+      width: 100%;
+      height: 530px;
+
+      div {
+        img {
+          width: 50%;
+        }
+      }
+    }
+
+
   }
 }
 

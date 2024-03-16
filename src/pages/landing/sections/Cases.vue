@@ -12,13 +12,13 @@
           :loop="true"
           :modules="modules"
           class="mySwiper"
+          navigation
           :breakpoints="{
             768: {
               slidesPerView: 2,
             },
             992: {
               slidesPerView: 3,
-              navigation: true
             }
           }"
       >
@@ -229,6 +229,18 @@ export default {
   }
 
   /* CSS Mode */
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  .swiper-button-prev.swiper-button-hidden,
+  .swiper-button-next.swiper-button-hidden {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
 
   .swiper-lazy-preloader-white {
     --swiper-preloader-color: #fff;
@@ -569,7 +581,6 @@ export default {
       padding: 20px 20px;
       width: 19%;
       height: 225px;
-      border: 1px solid #17B2B233;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.05);
       box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
@@ -578,13 +589,13 @@ export default {
     }
 
     .inner_long_card_two {
+      margin-top: 20px;
       align-items: center;
       display: flex;
       flex-direction: column;
       padding: 10px 20px;
       width: 49%;
       height: 225px;
-      border: 1px solid #17B2B233;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.05);
       box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
@@ -612,17 +623,10 @@ export default {
       right: 5%;
     }
     .smi {
-
       .inner_card {
         padding: 20px 20px;
         width: 18%;
         height: 225px;
-        border: 1px solid #17B2B233;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
       }
 
       .inner_long_card_two {
@@ -632,12 +636,6 @@ export default {
         padding: 10px 20px;
         width: 48.5%;
         height: 225px;
-        border: 1px solid #17B2B233;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
 
         img {
           width: 20%;
@@ -757,6 +755,7 @@ export default {
         padding: 20px 20px;
         width: 48.5%;
         height: 185px;
+
       }
       .inner_long_card_two {
         align-items: center;
@@ -782,6 +781,35 @@ export default {
         height: 185px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .wrapper-block-five {
+    height: 2900px;
+
+    .inner_long_card {
+      h1 {
+        margin-top: 10px;
+        font-size: 28px;
+        line-height: normal;
+      }
+      p {
+        padding-top: 0;
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+
+    .smi {
+      .inner_card {
+        width: 100%;
+      }
+      .inner_long_card_two {
+        width: 100%;
+      }
+    }
+
   }
 }
 

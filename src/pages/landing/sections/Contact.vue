@@ -285,4 +285,19 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .wrapper-block-nine {
+    height: 2400px;
+    .inner_long_card {
+      height: 300px;
+    }
+    .inner_content {
+      .inner_card {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+}
 </style>

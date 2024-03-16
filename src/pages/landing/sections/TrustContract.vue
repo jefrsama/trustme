@@ -231,12 +231,12 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   .wrapper-block-four {
     .inner_card {
       padding: 30px 30px;
       width: 47%;
-      height: 306px;
+      height: 326px;
       border: 1px solid #17B2B233;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.05);
@@ -246,7 +246,7 @@ export default {
     }
     .mockup{
       top: 5%;
-      width: 35%;
+      width: 40%;
     }
     .inner_long_card {
       z-index: 100;
@@ -273,7 +273,8 @@ export default {
     .inner_card {
       padding: 30px 30px;
       width: 47%;
-      height: 306px;
+      height: 336px;
+
       h3 {
         font-size: 20px;
         font-weight: 400;
@@ -288,7 +289,7 @@ export default {
     }
     .mockup{
       top: 5%;
-      width: 35%;
+      width: 40%;
     }
     .inner_long_card {
       z-index: 100;
@@ -296,19 +297,12 @@ export default {
       padding: 30px 30px;
       width: 32%;
       height: 190px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
 
       h1 {
         font-size: 50px;
       }
       p {
         font-size: 18px;
-
       }
     }
   }
@@ -396,10 +390,11 @@ export default {
       }
 
       .inner_wrap {
-        margin-top: 620px;
+        margin-top: 550px;
         width: 100%;
       }
     }
+
     .inner_card {
       padding: 30px;
       width: 47%;
@@ -431,12 +426,6 @@ export default {
       padding: 15px;
       width: 48%;
       height: 184px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
 
       h1 {
         margin-top: 30px;
@@ -453,18 +442,40 @@ export default {
       padding: 15px;
       width: 100%;
       height: 184px;
-      border: 1px solid #17B2B233;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 2px 1px rgba(120, 214, 214, 0.2);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
     }
     .graph {
       position: absolute;
       width: 100%;
       bottom: 300px;
       left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .wrapper-block-four {
+    height: 2500px;
+    .inner_content {
+      display: flex;
+      flex-direction: column;
+
+      .inner_wrap {
+        margin-top: 330px;
+        width: 100%;
+      }
+    }
+    .inner_card {
+      padding: 30px;
+      width: 100%;
+      height: 290px;
+    }
+
+    .inner_long_card {
+      margin-top: 20px;
+      z-index: 100;
+      padding: 15px;
+      width: 100%;
+      height: 184px;
     }
   }
 }

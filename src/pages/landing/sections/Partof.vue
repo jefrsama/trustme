@@ -6,7 +6,7 @@
       <div class="light-container"></div>
       <h1 class="h1">{{$t("landing.become_part_of_trustme")}}</h1>
       <p class="py-3 text">{{$t("landing.investors_we_invite")}}</p>
-      <div class="d-flex justify-content-center align-items-center gap-70 mt-5">
+      <div class="d-flex justify-content-center align-items-center gap-70 mt-5 inner_cards">
         <div class="inner_card">
           <h3>{{$t("landing.three_business_angels")}}</h3>
           <h1 v-html="$t('landing.$100')"></h1>
@@ -207,7 +207,50 @@ export default {
 @media only screen and (max-width: 992px) {
   .wrapper-block-eight {
     .bg{
+      top: 10%;
       width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-block-eight {
+    width: 100%;
+    height: 1350px;
+    position: relative;
+    background-color: #020F22;
+
+    .bg{
+      top: 35%;
+      width: 100%;
+    }
+    .inner_cards {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .wrapper-block-eight {
+    width: 100%;
+    height: 1350px;
+    position: relative;
+    background-color: #020F22;
+
+    .bg{
+      top: 35%;
+      width: 100%;
+    }
+    .inner_cards {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      .inner_card {
+        width: 100%;
+        height: 300px;
+      }
     }
   }
 }

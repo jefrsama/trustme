@@ -7,7 +7,7 @@ export default {
         "news": "News",
         "TrustContract": "TrustContract",
 
-        "invest_into_the_fastest_grow_up_startup": "Invest in the fastest-growing startup in Central Asia",
+        "invest_into_the_fastest_grow_up_startup": "Invest in <span>the fastest-growing</span> startup in Central Asia",
 
         "invest_into_with_big_future": "Invest in a startup with a big future!",
         "invest_into_description": "“Starting its journey in 2020 as a platform for reviews and recommendations, <a href=\"#\">TrustMe</a> has become a popular platform used by both legal entities and individuals in Kazakhstan today. In December 2021, we launched an online contract signing service — <a href=\"#\">TrustContract</a>.”",
@@ -146,7 +146,9 @@ export default {
 
         "plans_into_next_year": "Plans for 2024",
         "x16": "x16",
-        "how_many_times_we_need_to_improve": "How many times we need to grow in 2024, increasing the value of the company to <span>$150 million</span>",
+        "how_many_times_we_need_to_improve": "How many times we need to grow in 2024, increasing the value",
+        "by_upgrade_cost_of_company": "of the company to <span>$150 million</span>",
+
         "new_markets": "New markets",
         "new_products": "New products",
         "high_demand": "High demand",
